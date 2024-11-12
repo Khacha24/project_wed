@@ -29,7 +29,7 @@
             <div class="con">
                 <div class="con-img">
                     <figure>
-                        <img src="img/logo/c60bdb79db810097.png" alt="กลาง">
+                        <img src="img/logo/zip_-_1.PNG" alt="กลาง">
                     </figure>
                 </div>
                 <div style="position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);">
@@ -43,7 +43,7 @@
                             <ul>
                                 <li>
                                     <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">กรุงเทพ</a>
+                                    <a href="Bangkok_main.php" style="color: black; text-decoration: none;">กรุงเทพ</a>
                                 </li>
                                 <li>
                                     <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
@@ -150,7 +150,7 @@
             <div class="con">
                 <div class="con-img">
                     <figure>
-                        <img src="img/logo/96bb68ca747d400a.PNG" alt="อีสาน">
+                        <img src="img/logo/zip_-_4.PNG" alt="อีสาน">
                     </figure>
                 </div>
                 <div style="position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);">
@@ -270,7 +270,7 @@
             <div class="con">
                 <div class="con-img">
                     <figure>
-                        <img src="img/logo/4534f6ee1ec81182.PNG" alt="เหนือ">
+                        <img src="img/logo/zip_-_5.PNG" alt="เหนือ">
                     </figure>
                 </div>
                 <div style="position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);">
@@ -379,7 +379,7 @@
             <div class="con">
                 <div class="con-img">
                     <figure>
-                        <img src="img/logo/1b07503cfac0278e.PNG" alt="ใต้">
+                        <img src="img/logo/zip_-_2.PNG" alt="ใต้">
                     </figure>
                 </div>
                 <div style="position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);">
@@ -471,7 +471,7 @@
             <div class="con">
                 <div class="con-img">
                     <figure>
-                        <img src="img/logo/6b7f6ae5d68ec2e1.PNG" alt="ตะวันออก">
+                        <img src="img/logo/zip_-_3.PNG" alt="ตะวันออก">
                     </figure>
                 </div>
                 <div style="position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);">

@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'connectdb.php';
 session_start();
 
@@ -13,11 +13,17 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 
 if ($row) {  // ตรวจสอบในฐานข้อมูล
+    $_SESSION["username"] = "root";
+    $_SESSION["pw"] = 1234;
+
+    header("Location: ");
+    exit;
+} else if ($row) {
     $_SESSION["username"] = $row['username'];
     $_SESSION["pw"] = $row['password'];
     $_SESSION["firstname"] = $row['name'];
     $_SESSION["lastname"] = $row['lastname'];
-    
+
     header("Location: index.php");
     exit;
 } else {
@@ -25,4 +31,3 @@ if ($row) {  // ตรวจสอบในฐานข้อมูล
     header("Location: login.php");
     exit;
 }
-?>

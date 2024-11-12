@@ -11,6 +11,7 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="Bootstrap/css/style.css">
+    <link rel="stylesheet" href="Bootstrap/css/style.css">
 </head>
 
 <body>
@@ -24,6 +25,7 @@
     <?php
     include 'menu.php';
     ?>
+
     <!-- ส่วนแนะนำสถานที่ท่องเที่ยว -->
     <div class="centered-container">
         <div class="centered-content">
@@ -72,13 +74,25 @@
     </form>
     <br>
     <br>
-    <link rel="stylesheet" href="Bootstrap/css/style.css">
+    <link rel="stylesheet" href="bootstrap/5.3.0/css/main_data.css">
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="Bootstrap/css/footerstyle.css">
     <div style="position: relative; height: 200px;">
         <div class="centered-container">
             <div class="centered-content">
-                <h1><span style="color: #000;">แนะ<span style="color: #FF8C00;">นำ</span></h1>
+                <div class="h-data">
+                    <h1><span style="color: #000;">แนะ<span style="color: #FF8C00;">นำ</span></h1>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position h-l">
+                    </div>
+                    <div <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position h-r">
+
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+
+
     </div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,37 +101,35 @@
         <div class="row position-relative">
             <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position position-1">
                 <a onclick="openPopup1()">
-                    <img src="img/logo/c60bdb79db810097.png" class="image-hover custom-img" alt="กลาง">
+                    <img src="img/logo/zip_-_1.PNG" class="image-hover custom-img" alt="กลาง">
                 </a>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position position-2">
                 <a onclick="openPopup2()">
-                    <img src="img/logo/96bb68ca747d400a.PNG" class="image-hover custom-img" alt="อีสาน">
+                    <img src="img/logo/zip_-_4.PNG" class="image-hover custom-img" alt="อีสาน">
                 </a>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position position-3">
                 <a onclick="openPopup3()">
-                    <img src="img/logo/4534f6ee1ec81182.PNG" class="image-hover custom-img" alt="เหนือ">
+                    <img src="img/logo/zip_-_5.PNG" class="image-hover custom-img" alt="เหนือ">
                 </a>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position position-4">
                 <a onclick="openPopup4()">
-                    <img src="img/logo/1b07503cfac0278e.PNG" class="image-hover custom-img" alt="ใต้">
+                    <img src="img/logo/zip_-_2.PNG" class="image-hover custom-img" alt="ใต้">
                 </a>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position position-5">
                 <a onclick="openPopup5()">
-                    <img src="img/logo/6b7f6ae5d68ec2e1.PNG" class="image-hover custom-img" alt="ตะวันตก">
+                    <img src="img/logo/zip_-_3.PNG" class="image-hover custom-img" alt="ตะวันออก">
                 </a>
             </div>
         </div>
-    </div>
+        <?php
+        include 'popup.php';
+        ?>
 
-    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="Bootstrap/css/footerstyle.css">
-    <?php
-    include 'popup.php';
-    ?>
 </body>
+
 
 </html>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <nav class="navbar navbar-expand-lg" style="background-color: #FF8C00; width: 100%;">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
@@ -23,7 +26,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">
-                        <h5>Services</h5>
+                        <h5>ข้อมูลจังหวัด</h5>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -39,14 +42,18 @@
                 // ตรวจสอบสถานะการเข้าสู่ระบบ
                 if (isset($_SESSION["username"])) {
                     // ถ้าเข้าสู่ระบบแล้ว แสดงลิงก์ "ออกจากระบบ"
-                    echo "<li class='nav-item'>
+                    echo "<ul class='navbar-nav'>
+                        <div class='container-right'>
                             <a class='nav-link text-white' href='logout.php'><b>ออกจากระบบ</b></a>
-                          </li>";
+                        </div>
+                      </ul>";
                 } else {
                     // ถ้ายังไม่ได้เข้าสู่ระบบ แสดงลิงก์ "เข้าสู่ระบบ"
-                    echo "<li class='nav-item'>
+                    echo "<ul class='navbar-nav'>
+                        <div class='container-right'>
                             <a class='nav-link text-white' href='login.php'><b>เข้าสู่ระบบ</b></a>
-                          </li>";
+                        </div>
+                      </ul>";
                 }
                 ?>
             </ul>
