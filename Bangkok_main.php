@@ -29,15 +29,7 @@
      <link rel="stylesheet" href="Bootstrap/css/mian_data.css">
      <div class="centered-container">
           <div class="centered-content">
-               <div class="h-data">
-                    <h1>สถานที่ท่องเที่ยวจังหวัด<span style="color: #FF8C00;">กรุงเทพ</span></h1>
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position h-l">
-                    </div>
-                    <div <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position h-r">
-
-                    </div>
-               </div>
-
+               <h1>สถานที่ท่องเที่ยวจังหวัด<span style="color: #FF8C00;">กรุงเทพ</span></h1>
           </div>
      </div>
 

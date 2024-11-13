@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <nav class="navbar navbar-expand-lg" style="background-color: #FF8C00; width: 100%;">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
@@ -34,6 +31,16 @@ session_start();
                         <h5>ติดต่อเรา</h5>
                     </a>
                 </li>
+                <?php
+                if (isset($_SESSION["admin"])) {
+                    echo "<li class='nav-item'>
+                    <a class='nav-link text-white' href='admin.php'>
+                        <h5>เพิ่มข้อมูล</h5>
+                    </a>
+                </li>";
+                } else {
+                }
+                ?>
             </ul>
 
             <!-- ส่วนเข้าสู่ระบบ/ออกจากระบบ ที่ชิดขวา -->

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="th">
 
@@ -15,13 +18,9 @@
 </head>
 
 <body>
-    <!-- ส่วนหัวเว็บไซต์ -->
-    <header>
-        <div class="d-flex justify-content-center w-100">
-            <img src="img/logo/3ebe4afe1fe35661.PNG" alt="description of image" width="350" height="140">
-        </div>
-
-    </header>
+    <div class='d-flex justify-content-center w-100'>
+        <img src='img/logo/3ebe4afe1fe35661.PNG' alt='description of image' width='350' height='140'>
+    </div>
     <?php
     include 'menu.php';
     ?>
@@ -77,58 +76,49 @@
     <link rel="stylesheet" href="bootstrap/5.3.0/css/main_data.css">
     <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="Bootstrap/css/footerstyle.css">
-    <div style="position: relative; height: 200px;">
-        <div class="centered-container">
-            <div class="centered-content">
-                <div class="h-data">
-                    <h1><span style="color: #000;">แนะ<span style="color: #FF8C00;">นำ</span></h1>
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position h-l">
-                    </div>
-                    <div <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position h-r">
 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="centered-container">
+        <div class="centered-content">
+            <div class="h-data">
+                <h1><span style="color: #000;">แนะ<span style="color: #FF8C00;">นำ</span></h1>
+                <div class="container my-5">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <a onclick="openPopup1()">
+                                <img src="img/logo/zip_-_1.PNG" class="image-hover custom-img" alt="ภาคกลาง">
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a onclick="openPopup2()">
+                                <img src="img/logo/zip_-_4.PNG" class="image-hover custom-img" alt="ภาคอีสาน">
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a onclick="openPopup3()">
+                                <img src="img/logo/zip_-_5.PNG" class="image-hover custom-img" alt="ภาคเหนือ">
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a onclick="openPopup4()">
+                                <img src="img/logo/zip_-_2.PNG" class="image-hover custom-img" alt="ภาคใต้">
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a onclick="openPopup5()">
+                                <img src="img/logo/zip_-_3.PNG" class="image-hover custom-img" alt="ภาคตะวันออก">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
     </div>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Layout</title>
-    <div class="container my-5">
-        <div class="row position-relative">
-            <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position position-1">
-                <a onclick="openPopup1()">
-                    <img src="img/logo/zip_-_1.PNG" class="image-hover custom-img" alt="กลาง">
-                </a>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position position-2">
-                <a onclick="openPopup2()">
-                    <img src="img/logo/zip_-_4.PNG" class="image-hover custom-img" alt="อีสาน">
-                </a>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position position-3">
-                <a onclick="openPopup3()">
-                    <img src="img/logo/zip_-_5.PNG" class="image-hover custom-img" alt="เหนือ">
-                </a>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position position-4">
-                <a onclick="openPopup4()">
-                    <img src="img/logo/zip_-_2.PNG" class="image-hover custom-img" alt="ใต้">
-                </a>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4 fixed-position position-5">
-                <a onclick="openPopup5()">
-                    <img src="img/logo/zip_-_3.PNG" class="image-hover custom-img" alt="ตะวันออก">
-                </a>
-            </div>
-        </div>
-        <?php
-        include 'popup.php';
-        ?>
-
+    <?php include 'popup.php'; ?>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 
 

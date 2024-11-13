@@ -32,12 +32,8 @@
                         <img src="img/logo/zip_-_1.PNG" alt="กลาง">
                     </figure>
                 </div>
-                <div style="position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);">
-                    <div class="con-h">
-                        <h3>ภาคกลาง</h3>
-                    </div>
-                </div>
-                <div style="position: absolute; top: 55%; left: 93%; transform: translate(-50%, -50%);">
+                <div class="con-h">
+                    <h3>ภาคกลาง</h3>
                     <div class="con-data">
                         <div class="column-list">
                             <ul>
@@ -125,6 +121,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -153,12 +150,8 @@
                         <img src="img/logo/zip_-_4.PNG" alt="อีสาน">
                     </figure>
                 </div>
-                <div style="position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);">
-                    <div class="con-h">
-                        <h3>ภาคอีสาน</h3>
-                    </div>
-                </div>
-                <div style="position: absolute; top: 55%; left: 93%; transform: translate(-50%, -50%);">
+                <div class="con-h">
+                    <h3>ภาคอีสาน</h3>
                     <div class="con-data">
                         <div class="column-list">
                             <ul>
@@ -245,6 +238,7 @@
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -273,12 +267,8 @@
                         <img src="img/logo/zip_-_5.PNG" alt="เหนือ">
                     </figure>
                 </div>
-                <div style="position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);">
-                    <div class="con-h">
-                        <h3>ภาคเหนือ</h3>
-                    </div>
-                </div>
-                <div style="position: absolute; top: 55%; left: 93%; transform: translate(-50%, -50%);">
+                <div class="con-h">
+                    <h3>ภาคเหนือ</h3>
                     <div class="con-data">
                         <div class="column-list">
                             <ul>
@@ -355,6 +345,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -382,12 +373,8 @@
                         <img src="img/logo/zip_-_2.PNG" alt="ใต้">
                     </figure>
                 </div>
-                <div style="position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);">
-                    <div class="con-h">
-                        <h3>ภาคใต้</h3>
-                    </div>
-                </div>
-                <div style="position: absolute; top: 55%; left: 93%; transform: translate(-50%, -50%);">
+                <div class="con-h">
+                    <h3>ภาคใต้</h3>
                     <div class="con-data">
                         <div class="column-list">
                             <ul>
@@ -474,12 +461,8 @@
                         <img src="img/logo/zip_-_3.PNG" alt="ตะวันออก">
                     </figure>
                 </div>
-                <div style="position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);">
-                    <div class="con-h">
-                        <h3>ภาคตะวันออก</h3>
-                    </div>
-                </div>
-                <div style="position: absolute; top: 55%; left: 93%; transform: translate(-50%, -50%);">
+                <div class="con-h">
+                    <h3>ภาคตะวันออก</h3>
                     <div class="con-data">
                         <div class="column-list">
                             <ul>

@@ -19,7 +19,7 @@
 .popup-content {
      position: fixed;
      background-color: white;
-     padding: 350px;
+     padding: 18.23vw;
      border-radius: 7px;
      height: 600px;
      width: 850px;
@@ -51,13 +51,13 @@
      height: 550px;
      justify-content: space-between;
      background-color: #ffff;
-
+     display: flex;
 
 }
 
 .con-img {
-     width: 400px;
-     height: 350px;
+     width: 600px;
+     height: 300px;
      padding-top: 70px;
      padding-left: 30px;
      background-color: #ffffff;
@@ -71,15 +71,15 @@
 
 .con-h {
      color: #000000;
+     background-color: #ffffff;
+     text-align: center;
+     width: 400px;
+     margin-top: 20px;
 }
 
-.con-data {
-     width: 700px;
-     height: 400px;
-     background-color: #ffffff;
-     padding: 20px;
-     padding-left: 20px;
-}
+
+
+
 
 .close-button {
      margin-top: 0px;
@@ -93,9 +93,13 @@
 }
 
 .column-list {
+     background-color: #ffffff;
      display: flex;
      flex-wrap: wrap;
-     max-width: 700px;
+     width: 600px;
+     margin-left: 40px;
+     text-align: left;
+     justify-content: left;
      /* กำหนดความกว้างสูงสุดของลิสต์ */
 }
 

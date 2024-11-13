@@ -2,29 +2,5 @@
      margin: 0px;
      padding: 0px;
      box-sizing: border-box;
-}
 
-.h-data {
-     background-color: rgb(255, 255, 255);
-     text-align: center;
-     width: 1200px;
-
-}
-
-.h-l {
-     background-color: #FF8C00;
-     height: 5px;
-     width: 300px;
-     top: 340px;
-     left: 24rem;
-     display: flex;
-}
-
-.h-r {
-     background-color: #FF8C00;
-     height: 5px;
-     width: 300px;
-     left: 77.5rem;
-     top: 340px;
-     display: flex;
 }

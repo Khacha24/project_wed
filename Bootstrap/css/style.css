@@ -21,7 +21,7 @@ body {
      border-radius: 8px;
      text-align: center;
      max-width: 80%;
-     /* สามารถปรับได้ตามที่ต้องการ */
+
 }
 
 .cen {
@@ -30,56 +30,31 @@ body {
      /* เต็มความสูงหน้าจอ */
 }
 
-.cen-content {
-     color: #000;
-     padding: 20px;
-     border-radius: 8px;
-     text-align: center;
-     max-width: 80%;
-     /* สามารถปรับได้ตามที่ต้องการ */
-}
-
-.bg {
-     display: flex;
-
-}
 
 .image-hover:hover {
      opacity: 0.8;
 }
 
+
 .custom-img {
-     width: 100%;
      height: auto;
      max-width: 350px;
      /* จำกัดขนาดรูปภาพสูงสุด */
+     width: 100%;
+     height: auto;
+     transition: transform 0.3s;
 }
 
-@media (min-width: 992px) {
-     .fixed-position {
-          position: absolute;
-          top: 20px;
-     }
+.custom-img:hover {
+     transform: scale(1.05);
+}
 
-     .position-1 {
-          left: 70px;
-     }
+.row {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+}
 
-     .position-2 {
-          left: 480px;
-     }
-
-     .position-3 {
-          left: 900px;
-     }
-
-     .position-4 {
-          top: 300px;
-          left: 250px;
-     }
-
-     .position-5 {
-          top: 300px;
-          left: 700px;
-     }
+.col-md-4 {
+     padding: 10px;
 }
