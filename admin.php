@@ -19,7 +19,7 @@
      </a>
      <div class="d-flex justify-content-center w-100 container">
           <div class="row">
-               <br> <br>
+               <br><br>
                <div class="alert h3" role="alert">
                     admin
                </div>

@@ -22,7 +22,7 @@ session_start();
       <img src="img/logo/3ebe4afe1fe35661.PNG" alt="Description of Image" width="350" height="140" />
     </a>
   </header>
-  <div style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -100%);">
+  <div style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -100%);">
     <div class="container">
       <div class="row">
         <br> <br>

@@ -21,7 +21,6 @@
           <div class="d-flex justify-content-center w-100">
                <img src="img/logo/3ebe4afe1fe35661.PNG" alt="description of image" width="350" height="140">
           </div>
-
      </header>
      <?php
      include 'menu.php';

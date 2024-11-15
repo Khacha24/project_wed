@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <nav class="navbar navbar-expand-lg" style="background-color: #FF8C00; width: 100%;">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
@@ -18,7 +21,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">
-                        <h5>สถานที่ท่องเที่ยว</h5>
+                        <h5>แนะนำสถานที่ท่องเที่ยว</h5>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -35,7 +38,7 @@
                 if (isset($_SESSION["admin"])) {
                     echo "<li class='nav-item'>
                     <a class='nav-link text-white' href='admin.php'>
-                        <h5>เพิ่มข้อมูล</h5>
+                        <h5>admin</h5>
                     </a>
                 </li>";
                 } else {

@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="th">
 
@@ -82,7 +79,7 @@ session_start();
     <div class="centered-container">
         <div class="centered-content">
             <div class="h-data">
-                <h1><span style="color: #000;">แนะ<span style="color: #FF8C00;">นำ</span></h1>
+                <h1><span style="color: #000;">เลือกจังหวัดที่<span style="color: #FF8C00;">คุณอยากไป</span></h1>
                 <div class="container my-5">
                     <div class="row">
                         <div class="col-12 col-md-4">
