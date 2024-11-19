@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mitr:wght@200;300;400;500;600;700&family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     font-family: "Mitr", sans-serif;
+     font-weight: 300;
+     font-style: normal;
+}
+
+.navbar {
+     background-color: #FF8C00;
+     padding: 20px 20px;
+}
+
+.container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     text-align: center;
+}
+
+.navbar-brand {
+     color: white;
+     text-decoration: none;
+     font-size: 24px;
+}
+
+.menu-toggle {
+     background: none;
+     border: none;
+     color: white;
+     font-size: 30px;
+     cursor: pointer;
+     display: none;
+}
+
+.navbar-links ul {
+     display: flex;
+     align-items: center;
+     text-align: center;
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     gap: 25px;
+}
+
+.navbar-links ul li {
+     margin-right: 20px;
+}
+
+.links:hover {
+     opacity: 0.5;
+     color: #000000;
+}
+
+.navbar-links ul li a {
+     color: white;
+     text-decoration: none;
+     font-size: 22px;
+}
+
+.login-links a {
+     color: white;
+     text-decoration: none;
+     font-size: 20px;
+     margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+     .navbar-links {
+          display: none;
+          width: 100%;
+          background-color: #FF8C00;
+          position: absolute;
+          top: 50px;
+          left: 0;
+     }
+
+     .navbar-links ul {
+          flex-direction: column;
+          width: 100%;
+     }
+
+     .navbar-links ul li {
+          text-align: center;
+          padding: 10px 0;
+     }
+
+     .menu-toggle {
+          display: block;
+     }
+
+     .navbar-links.active {
+          display: block;
+     }
+}

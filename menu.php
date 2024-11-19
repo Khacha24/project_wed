@@ -1,72 +1,46 @@
 <?php
 session_start();
 ?>
-<nav class="navbar navbar-expand-lg" style="background-color: #FF8C00; width: 100%;">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
+<!DOCTYPE html>
+<html lang="th">
 
-        <!-- ปุ่มสำหรับเปิดเมนูในมือถือ -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-white">v</span>
-        </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เมนูเปิดปิด</title>
+    <link rel="stylesheet" href="Bootstrap/css/menu_style.css">
+</head>
 
-        <!-- ส่วนของเมนู -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- ส่วนกลางของเมนู -->
-            <ul class="navbar-nav mx-auto" style="display: flex; gap: 100px; ">
-                <li class="nav-item">
-                    <a class="nav-link active text-white" href="index.php">
-                        <h5>หน้าแรก</h5>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">
-                        <h5>แนะนำสถานที่ท่องเที่ยว</h5>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">
-                        <h5>ข้อมูลจังหวัด</h5>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="ccc.php">
-                        <h5>ติดต่อเรา</h5>
-                    </a>
-                </li>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <div class="navbar-links" id="navbar-links">
+                <ul>
+                    <li><a href="index.php" class="links">หน้าแรก</a></li>
+                    <li><a href=" #" class="links">แนะนำสถานที่ท่องเที่ยว</a></li>
+                    <li><a href="#" class="links">ข้อมูลจังหวัด</a></li>
+                    <li><a href="ccc.php" class="links">ติดต่อเรา</a></li>
+                    <?php
+                    if (isset($_SESSION["admin"])) {
+                        echo "<li><a href='admin.php'class='links'>admin</a></li>";
+                    }
+                    ?>
+                </ul>
+            </div>
+            <div class="login-links">
                 <?php
-                if (isset($_SESSION["admin"])) {
-                    echo "<li class='nav-item'>
-                    <a class='nav-link text-white' href='admin.php'>
-                        <h5>admin</h5>
-                    </a>
-                </li>";
-                } else {
-                }
-                ?>
-            </ul>
-
-            <!-- ส่วนเข้าสู่ระบบ/ออกจากระบบ ที่ชิดขวา -->
-            <ul class="navbar-nav">
-                <?php
-                // ตรวจสอบสถานะการเข้าสู่ระบบ
                 if (isset($_SESSION["username"])) {
-                    // ถ้าเข้าสู่ระบบแล้ว แสดงลิงก์ "ออกจากระบบ"
-                    echo "<ul class='navbar-nav'>
-                        <div class='container-right'>
-                            <a class='nav-link text-white' href='logout.php'><b>ออกจากระบบ</b></a>
-                        </div>
-                      </ul>";
+                    echo "<a href='logout.php'class='links'>ออกจากระบบ</a>";
                 } else {
-                    // ถ้ายังไม่ได้เข้าสู่ระบบ แสดงลิงก์ "เข้าสู่ระบบ"
-                    echo "<ul class='navbar-nav'>
-                        <div class='container-right'>
-                            <a class='nav-link text-white' href='login.php'><b>เข้าสู่ระบบ</b></a>
-                        </div>
-                      </ul>";
+                    echo "<a href='login.php'class='links'>เข้าสู่ระบบ</a>";
                 }
                 ?>
-            </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
+    <script src="Bootstrap/js/menu_f.js"></script>
+</body>
+
+</html>

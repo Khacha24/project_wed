@@ -100,7 +100,6 @@
      margin-left: 40px;
      text-align: left;
      justify-content: left;
-     /* กำหนดความกว้างสูงสุดของลิสต์ */
 }
 
 .column-list ul {
@@ -113,4 +112,8 @@
 .column-list li {
      margin-bottom: 10px;
      /* ระยะห่างระหว่างรายการ */
+}
+
+.img {
+     border-radius: 15px;
 }

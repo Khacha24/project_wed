@@ -29,7 +29,7 @@
             <div class="con">
                 <div class="con-img">
                     <figure>
-                        <img src="img/logo/zip_-_1.PNG" alt="กลาง">
+                        <img src="img/logo/zip_-_1.PNG" class="img" alt="กลาง">
                     </figure>
                 </div>
                 <div class="con-h">
@@ -147,7 +147,7 @@
             <div class="con">
                 <div class="con-img">
                     <figure>
-                        <img src="img/logo/zip_-_4.PNG" alt="อีสาน">
+                        <img src="img/logo/zip_-_4.PNG" class="img" alt="อีสาน">
                     </figure>
                 </div>
                 <div class="con-h">
@@ -264,7 +264,7 @@
             <div class="con">
                 <div class="con-img">
                     <figure>
-                        <img src="img/logo/zip_-_5.PNG" alt="เหนือ">
+                        <img src="img/logo/zip_-_5.PNG" class="img" alt="เหนือ">
                     </figure>
                 </div>
                 <div class="con-h">
@@ -370,7 +370,7 @@
             <div class="con">
                 <div class="con-img">
                     <figure>
-                        <img src="img/logo/zip_-_2.PNG" alt="ใต้">
+                        <img src="img/logo/zip_-_2.PNG" class="img" alt="ใต้">
                     </figure>
                 </div>
                 <div class="con-h">
@@ -458,7 +458,7 @@
             <div class="con">
                 <div class="con-img">
                     <figure>
-                        <img src="img/logo/zip_-_3.PNG" alt="ตะวันออก">
+                        <img src="img/logo/zip_-_3.PNG" class="img" alt="ตะวันออก">
                     </figure>
                 </div>
                 <div class="con-h">
