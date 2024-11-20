@@ -39,7 +39,6 @@ session_start();
             </div>
         </div>
     </nav>
-
     <script src="Bootstrap/js/menu_f.js"></script>
 </body>
 
