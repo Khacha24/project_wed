@@ -9,7 +9,7 @@ $password = $_POST['password'];
 $password_check = $_POST['password2'];
 
 
-
+//sssssssss
 $sql_check = "SELECT * FROM member WHERE telephone = '$phone'";
 $result_check = mysqli_query($conn, $sql_check);
 
