@@ -11,19 +11,11 @@
      <!-- Option 1: Bootstrap Bundle with Popper -->
      <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
      <link rel="stylesheet" href="Bootstrap/css/style.css">
-     <link rel="stylesheet" href="Bootstrap/css/style.css">
-
-
-
+     <link rel="stylesheet" href="Bootstrap/css/footerstyle.css">
 </head>
 
 <body>
-     <!-- ส่วนหัวเว็บไซต์ -->
-     <header>
-          <div class="d-flex justify-content-center w-100">
-               <img src="img/logo/3ebe4afe1fe35661.PNG" alt="description of image" width="350" height="140">
-          </div>
-     </header>
+
      <?php
      include 'menu.php';
      ?>
@@ -33,7 +25,8 @@
                <h1>สถานที่ท่องเที่ยวจังหวัด<span style="color: #FF8C00;">กรุงเทพ</span></h1>
           </div>
      </div>
-
+     <br><br><br><br><br>
+     <?php include 'footer.php'; ?>
 </body>
 
 </html>
