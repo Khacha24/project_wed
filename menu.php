@@ -12,6 +12,9 @@ session_start();
 </head>
 
 <body>
+    <div class='d-flex justify-content-center w-100'>
+        <img src='img/logo/3e0f7443ad39a0ad.png' alt='description of image' width='360' height='150'>
+    </div>
     <nav class="navbar">
         <div class="container">
             <button class="menu-toggle" id="menu-toggle">☰</button>
@@ -20,7 +23,7 @@ session_start();
                     <li><a href="index.php" class="links">หน้าแรก</a></li>
                     <li><a href=" #" class="links">แนะนำสถานที่ท่องเที่ยว</a></li>
                     <li><a href="#" class="links">ข้อมูลจังหวัด</a></li>
-                    <li><a href="ccc.php" class="links">ติดต่อเรา</a></li>
+                    <li><a href="ccc.php" class="links">เกี่ยวกับเรา</a></li>
                     <?php
                     if (isset($_SESSION["admin"])) {
                         echo "<li><a href='admin.php'class='links'>admin</a></li>";

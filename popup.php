@@ -12,6 +12,7 @@
 
     function closePopup1() {
         document.getElementById("popup1").style.display = "none";
+
     }
 </script>
 

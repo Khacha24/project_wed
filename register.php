@@ -19,12 +19,12 @@ session_start();
 
 <body>
   <a href="index.php">
-    <img src="img/logo/3ebe4afe1fe35661.PNG" alt="Description of Image" width="350" height="140" />
+    <img src="img/logo/3e0f7443ad39a0ad.png" alt="Description of Image" width="350" height="140" />
   </a>
-  <div style="position: absolute; top: 90%; left: 50%; transform: translate(-50%, -100%);">
+  <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -100%);">
     <div class="container">
       <div class="row">
-        <br> <br>
+        <br><br>
         <div class="alert h3" role="alert">
           สมัครสมาชิก
         </div>

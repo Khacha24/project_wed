@@ -23,7 +23,7 @@ if (isset($_SESSION["admin"])) {
 
 <body>
      <a href="index.php">
-          <img src="img/logo/3ebe4afe1fe35661.PNG" alt="Description of Image" width="350" height="140" />
+          <img src="img/logo/3e0f7443ad39a0ad.png" alt="Description of Image" width="350" height="140" />
      </a>
      <div class="d-flex justify-content-center w-100 container">
           <div class="row">
