@@ -1,0 +1,28 @@
+* {
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+}
+
+.con-contact {
+     justify-content: center;
+     align-items: center;
+
+}
+
+.contact {
+
+     color: #000;
+     margin-left: 300px;
+     margin-top: 50px;
+     max-width: 1200px;
+     height: 100%;
+}
+
+.data p {
+     font-size: 23px;
+}
+
+.about p {
+     font-size: 23px;
+}
