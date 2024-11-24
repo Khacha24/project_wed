@@ -18,6 +18,7 @@ if ($row) {  // ตรวจสอบในฐานข้อมูล
         $_SESSION["username"] = "root";
         $_SESSION["pw"] = 12345;
         $_SESSION["admin"] = "root" && 12345;
+        $_SESSION["user"] = $_SESSION["username"];
 
         header("Location: index.php");
         exit;
@@ -26,7 +27,7 @@ if ($row) {  // ตรวจสอบในฐานข้อมูล
         $_SESSION["pw"] = $row['password'];
         $_SESSION["firstname"] = $row['name'];
         $_SESSION["lastname"] = $row['lastname'];
-
+        $_SESSION["user"] = $_SESSION["username"];
         header("Location: index.php");
         exit;
     }
