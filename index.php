@@ -22,17 +22,15 @@
     <!-- ส่วนแนะนำสถานที่ท่องเที่ยว -->
     <div class="centered-container">
         <div class="centered-content">
-            <h1>เที่ยว<span style="color: #FF8C00;">ไหนดี?</span></h1>
+            <h1>คุณอยากไป<span style="color: #FF8C00;">ที่ไหนล่ะ ?</span></h1>
+            <i class="fi fi-rs-map-marker"></i>
         </div>
     </div>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ค้นหาสถานที่ท่องเที่ยว</title>
     <link rel="stylesheet" href="bootstrap/5.3.0/css/bootstrap.min.css">
     <style>
         .search-form {
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
             margin: auto;
             display: flex;
             justify-content: center;
@@ -57,11 +55,11 @@
         }
 
         .btn-search:hover {
-            background-color: #e69500;
+            background-color: #FF8C00;
         }
     </style>
     <form class="search-form d-flex">
-        <input class="form-control me-2" type="search" placeholder="ค้นหาสถานที่เที่ยว" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="ค้นหาสถานที่เที่ยวที่คุณอยากไป" aria-label="Search">
         <button class="btn btn-outline-success btn-search color: #fd7e14" type="submit">ค้นหา</button>
     </form>
 

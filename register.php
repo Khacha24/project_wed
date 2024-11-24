@@ -1,6 +1,11 @@
 <?php
 include 'connectdb.php';
 session_start();
+if (isset($_SESSION["user"])) {
+  echo " <script> alert('คุณกำลังออกจากระบบ'); </script>";
+  echo "<script> window.location = 'logout.php';</script>";
+} else {
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,12 +26,12 @@ session_start();
   <a href="index.php">
     <img src="img/logo/3e0f7443ad39a0ad.png" alt="Description of Image" width="350" height="140" />
   </a>
-  <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -100%);">
+  <div style="position: absolute; top: 85%; left: 50%; transform: translate(-50%, -100%);">
     <div class="container">
       <div class="row">
         <br><br>
         <div class="alert h3" role="alert">
-          สมัครสมาชิก
+          สร้างบัญชี
         </div>
         <form method="POST" action="insert_register.php">
           <input type="text" name="firstname" class="form-control" required placeholder="ชื่อ"> <br>
@@ -43,13 +48,13 @@ session_start();
           }
           ?>
           <input type="password" name="password2" maxlength="10" class="form-control" required placeholder="ยืนยันรหัสผ่าน"><br>
-          <input type="submit" name="submit" value="ตกลง" class="btn text-white " style="background-color: #FF8C00;">
+          <p>กลับไปที่หน้า <a href="login.php">เข้าสู่ระบบ</a> </p>
+          <input type="submit" name="submit" value="ยืนยัน" class="btn text-white " style="background-color: #FF8C00;">
           <input type="reset" name="submit" value="ยกเลิก" class=" btn text-gray btn-warning " style="background-color: #ffffff; "><br>
-          <br><a href="login.php">เข้าสู่ระบบ</a>
         </form>
       </div>
     </div>
-  </div>
+
   </div>
 </body>
 

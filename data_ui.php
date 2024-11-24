@@ -1,6 +1,11 @@
 <?php
 include 'con_admin.php';
 session_start();
+if (isset($_SESSION["admin"])) {
+} else {
+     echo " <script> alert('ไม่ได้รับอนุญาตให้เข้า'); </script>";
+     echo "<script> window.location = 'login.php';</script>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,71 +41,46 @@ session_start();
 
                <form method="POST" action="add_data.php">
                     <label for="dropdown1">ภาค:</label>
+                    <?php
+                    $sql = "SELECT * FROM zone ORDER BY 'id_ zone'";
+                    $result = mysqli_query($conn, $sql);
+                    ?>
                     <select id="dropdown1">
                          <option value="">เลือกภาค</option>
-                         <option value="option2">กลาง</option>
-                         <option value="option3">อีสาน</option>
-                         <option value="option4">เหนือ</option>
-                         <option value="option4">ใต้</option>
-                         <option value="option4">ตะวันออก</option>
+                         <?php
+                         if ($result->num_rows > 0) {
+                              // แสดงผลแต่ละแถว
+                              while ($row = $result->fetch_assoc()) {
+                                   echo "<option value='" . $row['id_ zone'] . "'>" . $row['name_zone'] . "</option>";
+                              }
+                         } else {
+                              echo "<option value=''>ไม่มีข้อมูล</option>";
+                         }
+                         ?>
                     </select>
                     <br><br>
+                    <?php
+                    $sql = "SELECT * FROM province ORDER BY 'id_province'";
+                    $result = mysqli_query($conn, $sql);
+                    ?>
                     <label for="dropdown2">จังหวัด:</label>
                     <select id="dropdown2">
                          <option value="">เลือกจังหวัด</option>
+                         <?php
+                         if ($result->num_rows > 0) {
+                              // แสดงผลแต่ละแถว
+                              while ($row = $result->fetch_assoc()) {
+                                   echo "<option value='" . $row['id_province'] . "'>" . $row['name_province'] . "</option>";
+                              }
+                         } else {
+                              echo "<option value=''>ไม่มีข้อมูล</option>";
+                         }
+                         ?>
                     </select>
-                    <script>
-                         $(document).ready(function() {
-                              // เก็บข้อมูลตัวเลือกสำหรับดรอปดาวน์ที่สอง
-                              const options = {
-                                   option2: [{
-                                             value: "apple",
-                                             text: "แอปเปิ้ล"
-                                        },
-                                        {
-                                             value: "banana",
-                                             text: "กล้วย"
-                                        },
-                                        {
-                                             value: "cherry",
-                                             text: "เชอร์รี่"
-                                        }
-                                   ],
-                                   option3: [{
-                                             value: "dog",
-                                             text: "สุนัข"
-                                        },
-                                        {
-                                             value: "cat",
-                                             text: "แมว"
-                                        },
-                                        {
-                                             value: "elephant",
-                                             text: "ช้าง"
-                                        }
-                                   ]
-                              };
-
-                              $("#dropdown1").change(function() {
-                                   const selectedOption = $(this).val(); // ค่าที่เลือกในดรอปดาวน์แรก
-                                   const dropdown2 = $("#dropdown2"); // ดรอปดาวน์ที่สอง
-                                   dropdown2.empty(); // ลบตัวเลือกเก่าทั้งหมด
-
-                                   // ถ้าเลือกตัวเลือกแรกที่ไม่ใช่ค่าว่าง ให้แสดงตัวเลือกที่สองที่เกี่ยวข้อง
-                                   if (selectedOption && options[selectedOption]) {
-                                        dropdown2.append('<option value="">เลือกจังหวัด</option>');
-                                        options[selectedOption].forEach(function(option) {
-                                             dropdown2.append(new Option(option.text, option.value));
-                                        });
-                                   } else {
-                                        dropdown2.append('<option value="">เลือกจังหวัด</option>'); // ถ้าไม่ได้เลือกก็แสดงข้อความเริ่มต้น
-                                   }
-                              });
-                         });
-                    </script>
                     <br><br>
                     <input type="text" name="name_location" class="form-control" required placeholder="ชื่อสถานที่ท่องเที่ยว"> <br>
                     <input type="text" name="firstname" class="form-control" required placeholder="รายละเอียด"> <br>
+                    <input type="text" name="address" class="form-control" required placeholder="ที่อยู่"> <br>
                     <input type="submit" name="submit" value="เพิ่ม" class="btn text-white " style="background-color: #FF8C00;">
                     <input type="reset" name="submit" value="ยกเลิก" class=" btn text-gray btn-warning " href="admin.php" style="background-color: #ffffff; "><br>
                     <br><a href="admin.php">กลับ</a>
