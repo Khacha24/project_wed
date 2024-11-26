@@ -46,9 +46,7 @@ if (isset($_SESSION["user"])) {
           <p>คุณยังไม่มีบัญชี? <a href="register.php">สร้างบัญชี</a> ที่นี่</p>
           <input type="submit" name="submit" value="ยืนยัน" class="btn text-white " style="background-color: #FF8C00;">
           <input type="reset" name="submit" value="ยกเลิก" class=" btn text-gray btn-warning " style="background-color: #ffffff; "><br>
-
           <br>
-
         </form>
       </div>
     </div>

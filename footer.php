@@ -8,7 +8,7 @@
                <li><a href="index.php" class="links">หน้าแรก</a></li>
                <li><a href=" #" class="links">แนะนำสถานที่ท่องเที่ยว</a></li>
                <li><a href="#" class="links">ข้อมูลจังหวัด</a></li>
-               <li><a href="ccc.php" class="links">เกี่ยวกับเรา</a></li>
+               <li><a href="contact.php" class="links">เกี่ยวกับเรา</a></li>
           </ul>
      </div>
      <div class="text_footer-r">

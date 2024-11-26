@@ -121,27 +121,20 @@
 
      .popup-content {
           position: relative;
-          /* ลด fixed เพื่อจัดตำแหน่งได้ง่าย */
           background-color: #F5F5F5;
           padding: 0vw;
-          /* ลดขนาด padding */
           border-radius: 10px;
           width: 90%;
-          /* ใช้ width เป็น % */
           max-height: 90vh;
-          /* จำกัดความสูง */
           overflow-y: auto;
-          /* แก้ไข overflow */
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          /* เพิ่มเงาเพื่อให้ดูโดดเด่น */
+
      }
 
      .top {
           background-color: #FF8C00;
           height: 50px;
-          /* ใช้ height แทน max-height */
           width: 100%;
-          /* ให้ขยายเต็มพื้นที่ของ .popup-content */
           padding: 10px 15px;
           color: #fff;
           display: flex;
@@ -164,20 +157,15 @@
 
      .con {
           flex-direction: column;
-          /* เปลี่ยนเป็น column สำหรับมือถือ */
           gap: 15px;
-          /* เพิ่มระยะห่าง */
           width: 100%;
-          /* ให้เต็มพื้นที่ */
           align-items: center;
           background-color: #F5F5F5;
      }
 
      .con-img {
           width: 100%;
-          /* ใช้ 100% เพื่อปรับตามหน้าจอ */
           max-height: 50vh;
-          /* จำกัดความสูง */
           margin-top: 20px;
           padding: 50px;
           background-color: #F5F5F5;
@@ -188,7 +176,6 @@
 
      .con-img img {
           width: auto;
-          /* ใช้ auto เพื่อให้ปรับตามความเหมาะสม */
           max-width: 100%;
           max-height: 100%;
           border-radius: 15px;
@@ -203,7 +190,9 @@
      }
 
      .column-list {
-          padding-left: 80px;
+          justify-content: center;
+          margin-left: 0px;
+          width: 100%;
      }
 
      .column-list ul li {
