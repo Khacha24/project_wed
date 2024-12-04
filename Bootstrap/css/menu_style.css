@@ -61,12 +61,36 @@ body {
      font-size: 22px;
 }
 
-.login-links a {
+.dropdown .btn-secondary {
+     background-color: #FF8C00;
      color: white;
-     text-decoration: none;
+     border: none;
      font-size: 20px;
-     margin-left: 20px;
 }
+
+.dropdown .btn-secondary:hover {
+     opacity: 0.5;
+     color: #000000;
+}
+
+.dropdown-menu .dropdown-item {
+     color: #333;
+     text-decoration: none;
+}
+
+.dropdown a {
+     font-size: 20px;
+}
+
+
+.links {
+     color: white;
+     padding: 10px 15px;
+     text-decoration: none;
+     border-radius: 5px;
+}
+
+
 
 @media (max-width: 768px) {
      .navbar-links {

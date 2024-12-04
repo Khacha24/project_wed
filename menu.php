@@ -31,12 +31,18 @@ session_start();
                     ?>
                 </ul>
             </div>
-            <div class="login-links">
+            <div class='dropdown'>
                 <?php
                 if (isset($_SESSION["username"])) {
-                    echo "<a href='logout.php'class='links'>ออกจากระบบ</a>";
+                    echo "<button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'>";
+                    echo "สวัสดีคุณ ";
+                    echo $_SESSION["user"];
+                    echo "</button>";
+                    echo "<ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>";
+                    echo  "<li><a class='dropdown-item' href='logout.php'>ออกจากระบบ</a></li>";
+                    echo  "</ul>";
                 } else {
-                    echo "<a href='login.php'class='links'>เข้าสู่ระบบ</a>";
+                    echo "<a href='login.php' class='links'>เข้าสู่ระบบ</a>";
                 }
                 ?>
             </div>

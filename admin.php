@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION["admin"])) {
 } else {
      echo " <script> alert('ไม่ได้รับอนุญาต'); </script>";
-     echo "<script> window.location = 'login.php';</script>";
+     echo "<script> window.location = 'index.php';</script>";
 }
 ?>
 <?php include 'con_admin.php'; ?>
