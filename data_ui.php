@@ -68,7 +68,6 @@ if (isset($_SESSION["admin"])) {
                          <option value="">เลือกจังหวัด</option>
                          <?php
                          if ($result->num_rows > 0) {
-                              // แสดงผลแต่ละแถว
                               while ($row = $result->fetch_assoc()) {
                                    echo "<option value='" . $row['id_province'] . "'>" . $row['name_province'] . "</option>";
                               }
