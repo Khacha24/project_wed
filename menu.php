@@ -13,7 +13,9 @@ session_start();
 
 <body>
     <div class='d-flex justify-content-center w-100'>
-        <img src='img/logo/3e0f7443ad39a0ad.png' alt='description of image' width='360' height='150'>
+        <a href="index.php">
+            <img src="img/logo/3e0f7443ad39a0ad.png" alt="Description of Image" width="350" height="140" />
+        </a>
     </div>
     <nav class="navbar">
         <div class="container">

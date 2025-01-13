@@ -28,7 +28,7 @@ if (isset($_SESSION["admin"])) {
      </a>
      <style>
           .container {
-               max-width: 500px;
+               max-width: 750px;
                width: 100%;
           }
      </style>
@@ -38,55 +38,69 @@ if (isset($_SESSION["admin"])) {
                <div class="alert h3" role="alert">
                     เพิ่มสถานที่ท่องเที่ยว
                </div>
+               <form method="POST" action="add_data.php" enctype="multipart/form-data">
+                    <!-- Dropdown สำหรับภาค -->
+                    <label for="region">ภาค:</label>
+                    <select id="region" name="region">
+                         <option value="">-- เลือกภาค --</option>
+                         <?php
+                         include 'con_admin.php';
+                         $query = "SELECT * FROM zone";
+                         $result = $conn->query($query);
+                         while ($row = $result->fetch_assoc()) {
+                              echo '<option value="' . $row['zone_id'] . '">' . $row['name_zone'] . '</option>';
+                         }
+                         ?>
+                    </select>
 
-               <form method="POST" action="add_data.php">
-                    <label for="dropdown1">ภาค:</label>
-                    <?php
-                    $sql = "SELECT * FROM zone ORDER BY 'id_ zone'";
-                    $result = mysqli_query($conn, $sql);
-                    ?>
-                    <select id="dropdown1">
-                         <option value="">เลือกภาค</option>
-                         <?php
-                         if ($result->num_rows > 0) {
-                              // แสดงผลแต่ละแถว
-                              while ($row = $result->fetch_assoc()) {
-                                   echo "<option value='" . $row['id_ zone'] . "'>" . $row['name_zone'] . "</option>";
+                    <!-- Dropdown สำหรับจังหวัด -->
+                    <label for="province">จังหวัด:</label>
+                    <select id="province" name="province_id">
+                         <option value="">-- เลือกจังหวัด --</option>
+                    </select>
+                    <script>
+                         // เมื่อเลือกภาค ให้โหลดจังหวัด
+                         $('#region').change(function() {
+                              const regionId = $(this).val();
+                              if (regionId) {
+                                   $.ajax({
+                                        type: 'POST',
+                                        url: 'get_provinces.php',
+                                        data: {
+                                             id_zone: regionId
+                                        },
+                                        success: function(response) {
+                                             $('#province').html(response);
+                                        }
+                                   });
+                              } else {
+                                   $('#province').html('<option value="">-- เลือกจังหวัด --</option>');
                               }
-                         } else {
-                              echo "<option value=''>ไม่มีข้อมูล</option>";
+                         });
+                    </script>
+                    <label for="region">ประเภท:</label>
+                    <select id="type_id" name="type_id">
+                         <option value="">-- เลือกประเภท --</option>
+                         <?php
+                         include 'con_admin.php';
+                         $query = "SELECT * FROM type";
+                         $result = $conn->query($query);
+                         while ($row = $result->fetch_assoc()) {
+                              echo '<option value="' . $row['type_id'] . '">' . $row['type_name'] . '</option>';
                          }
                          ?>
                     </select>
                     <br><br>
-                    <?php
-                    $sql = "SELECT * FROM province ORDER BY 'id_province'";
-                    $result = mysqli_query($conn, $sql);
-                    ?>
-                    <label for="dropdown2">จังหวัด:</label>
-                    <select id="dropdown2">
-                         <option value="">เลือกจังหวัด</option>
-                         <?php
-                         if ($result->num_rows > 0) {
-                              while ($row = $result->fetch_assoc()) {
-                                   echo "<option value='" . $row['id_province'] . "'>" . $row['name_province'] . "</option>";
-                              }
-                         } else {
-                              echo "<option value=''>ไม่มีข้อมูล</option>";
-                         }
-                         ?>
-                    </select>
-                    <br><br>
-                    <input type="text" name="name_location" class="form-control" required placeholder="ชื่อสถานที่ท่องเที่ยว"> <br>
-                    <input type="text" name="firstname" class="form-control" required placeholder="รายละเอียด"> <br>
+                    <label for="img">อัปโหลดรูปภาพ:</label>
+                    <input type="file" name="img" class="form-control" required accept="image/*">
+                    <br>
+                    <input type="text" name="location_name" class="form-control" required placeholder="ชื่อสถานที่ท่องเที่ยว"> <br>
+                    <input type="text" name="details" class="form-control" required placeholder="รายละเอียด"> <br>
                     <input type="text" name="address" class="form-control" required placeholder="ที่อยู่"> <br>
                     <input type="submit" name="submit" value="เพิ่ม" class="btn text-white " style="background-color: #FF8C00;">
                     <input type="reset" name="submit" value="ยกเลิก" class=" btn text-gray btn-warning " href="admin.php" style="background-color: #ffffff; "><br>
                     <br><a href="admin.php">กลับ</a>
                </form>
-          </div>
-     </div>
-     </div>
 </body>
 
 </html>
