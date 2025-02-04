@@ -32,7 +32,7 @@ if (isset($_SESSION["admin"])) {
                width: 100%;
           }
      </style>
-     <br><br><br>
+     <br>
      <div class="container">
           <div class="row">
                <div class="alert h3" role="alert">
@@ -52,7 +52,6 @@ if (isset($_SESSION["admin"])) {
                          }
                          ?>
                     </select>
-
                     <!-- Dropdown สำหรับจังหวัด -->
                     <label for="province">จังหวัด:</label>
                     <select id="province" name="province_id">
@@ -91,15 +90,44 @@ if (isset($_SESSION["admin"])) {
                          ?>
                     </select>
                     <br><br>
-                    <label for="img">อัปโหลดรูปภาพ:</label>
-                    <input type="file" name="img" class="form-control" required accept="image/*">
+                    <label for="img">อัปโหลดรูปภาพ (เฉพาะ .png และ .jpg):</label>
+                    <input type="file" name="img" id="img" class="form-control" accept=".png, .jpg" required>
                     <br>
-                    <input type="text" name="location_name" class="form-control" required placeholder="ชื่อสถานที่ท่องเที่ยว"> <br>
-                    <input type="text" name="details" class="form-control" required placeholder="รายละเอียด"> <br>
-                    <input type="text" name="address" class="form-control" required placeholder="ที่อยู่"> <br>
-                    <input type="submit" name="submit" value="เพิ่ม" class="btn text-white " style="background-color: #FF8C00;">
+                    <label for="location_name">ชื่อสถานที่ท่องเที่ยว:</label>
+                    <input type="text" name="location_name" class="form-control"><br>
+                    <label for="details">รายละเอียด:</label>
+                    <textarea name="details" id="details" class="form-control" rows="5" required></textarea><br>
+                    <script>
+                         document.getElementById('details').addEventListener('input', function(e) {
+                              // รับภาษาไทย, อังกฤษ, ตัวเลข, ช่องว่าง, บวก (+), ลบ (-), เท่ากับ (=), และเครื่องหมาย /
+                              const pattern = /^[\u0E00-\u0E7F\u0041-\u005A\u0061-\u007A\u0030-\u0039\s+\-=/]+$/;
+                              const value = this.value;
+
+                              // ลบอักขระที่ไม่ตรงกับรูปแบบ
+                              if (!pattern.test(value)) {
+                                   this.value = value.replace(/[^ก-ฮa-zA-Z0-9\s+\-=/.]/g, '');
+                              }
+                         });
+                    </script>
+                    <label for="address">ที่อยู่:</label>
+                    <textarea name="address" id="address" class="form-control" rows="5" required></textarea><br><br>
+
+                    <script>
+                         document.getElementById('address').addEventListener('input', function(e) {
+                              // รับภาษาไทย, อังกฤษ, ตัวเลข, ช่องว่าง, บวก (+), ลบ (-), เท่ากับ (=), และเครื่องหมาย /
+                              const pattern = /^[\u0E00-\u0E7F\u0041-\u005A\u0061-\u007A\u0030-\u0039\s+\-=/]+$/;
+                              const value = this.value;
+
+                              // ลบอักขระที่ไม่ตรงกับรูปแบบ
+                              if (!pattern.test(value)) {
+                                   this.value = value.replace(/[^ก-ฮa-zA-Z0-9\s+\-=/.]/g, '');
+                              }
+                         });
+                    </script>
+                    <input type="submit" name="submit" value="เพิ่ม" class="btn text-white " style="background-color:rgb(240, 133, 2);">
                     <input type="reset" name="submit" value="ยกเลิก" class=" btn text-gray btn-warning " href="admin.php" style="background-color: #ffffff; "><br>
                     <br><a href="admin.php">กลับ</a>
+                    <a href="data_location.php">ข้อมูลสถานที่ทั้งหมด</a>
                </form>
 </body>
 
