@@ -40,7 +40,7 @@ $result = $conn->query($sql);
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>admin</title>
+     <title>ข้อมูลสถานที่ทั้งหมด</title>
      <!-- Bootstrap CSS -->
      <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
      <!-- Option 1: Bootstrap Bundle with Popper -->

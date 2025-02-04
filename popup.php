@@ -38,90 +38,89 @@
                         <div class="column-list">
                             <ul>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="provinces.php" style="color: black; text-decoration: none;">กรุงเทพ</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=กรุงเทพ" style="color: black; text-decoration: none;">กรุงเทพ</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ราชบุรี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ราชบุรี" style="color: black; text-decoration: none;">ราชบุรี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">กาญจนบุรี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=กาญจนบุรี" style="color: black; text-decoration: none;">กาญจนบุรี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ฉะเชิงเทรา</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ฉะเชิงเทรา" style="color: black; text-decoration: none;">ฉะเชิงเทรา</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ชัยนาท</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ชัยนาท" style="color: black; text-decoration: none;">ชัยนาท</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">นครนายก</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=นครนายก" style="color: black; text-decoration: none;">นครนายก</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">นครปฐม</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=นครปฐม" style="color: black; text-decoration: none;">นครปฐม</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">นนทบุรี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=นนทบุรี" style="color: black; text-decoration: none;">นนทบุรี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ปทุมธานี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ปทุมธานี" style="color: black; text-decoration: none;">ปทุมธานี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">อยุธยา</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=อยุธยา" style="color: black; text-decoration: none;">อยุธยา</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">เพชรบุรี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=เพชรบุรี" style="color: black; text-decoration: none;">เพชรบุรี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ลพบุรี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ลพบุรี" style="color: black; text-decoration: none;">ลพบุรี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สมุทรปราการ</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สมุทรปราการ" style="color: black; text-decoration: none;">สมุทรปราการ</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สมุทรสงคราม</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สมุทรสงคราม" style="color: black; text-decoration: none;">สมุทรสงคราม</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สมุทรสาคร</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สมุทรสาคร" style="color: black; text-decoration: none;">สมุทรสาคร</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สระบุรี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สระบุรี" style="color: black; text-decoration: none;">สระบุรี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สิงห์บุรี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สิงห์บุรี" style="color: black; text-decoration: none;">สิงห์บุรี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สุพรรณบุรี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สุพรรณบุรี" style="color: black; text-decoration: none;">สุพรรณบุรี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">อ่างทอง</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=อ่างทอง" style="color: black; text-decoration: none;">อ่างทอง</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ประจวบศีรีขันธ์</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ประจวบคีรีขันธ์" style="color: black; text-decoration: none;">ประจวบคีรีขันธ์</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -156,90 +155,90 @@
                         <div class="column-list">
                             <ul>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">โคราช</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=โคราช" style="color: black; text-decoration: none;">โคราช</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ขอนแก่น</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ขอนแก่น" style="color: black; text-decoration: none;">ขอนแก่น</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">กาฬสินธุ์</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=กาฬสินธุ์" style="color: black; text-decoration: none;">กาฬสินธุ์</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ชัยภูมิ</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ชัยภูมิ" style="color: black; text-decoration: none;">ชัยภูมิ</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">นครพนม</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=นครพนม" style="color: black; text-decoration: none;">นครพนม</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">บุรีรัมย์</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=บุรีรัมย์" style="color: black; text-decoration: none;">บุรีรัมย์</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">บึงกาฬ</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=บึงกาฬ" style="color: black; text-decoration: none;">บึงกาฬ</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">มหาสารคาม</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=มหาสารคาม" style="color: black; text-decoration: none;">มหาสารคาม</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">มุกดาหาร</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=มุกดาหาร" style="color: black; text-decoration: none;">มุกดาหาร</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ยโสธร</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ยโสธร" style="color: black; text-decoration: none;">ยโสธร</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ร้อยเอ็ด</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ร้อยเอ็ด" style="color: black; text-decoration: none;">ร้อยเอ็ด</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">เลย</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=เลย" style="color: black; text-decoration: none;">เลย</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ศรีสะเกษ</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ศรีสะเกษ" style="color: black; text-decoration: none;">ศรีสะเกษ</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สกลนคร</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สกลนคร" style="color: black; text-decoration: none;">สกลนคร</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สุรินทร์</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สุรินทร์" style="color: black; text-decoration: none;">สุรินทร์</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">หนองคาย</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=หนองคาย" style="color: black; text-decoration: none;">หนองคาย</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">หนองบัวลำภู</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=หนองบัวลำภู" style="color: black; text-decoration: none;">หนองบัวลำภู</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">อำนาจเจริญ</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=อำนาจเจริญ" style="color: black; text-decoration: none;">อำนาจเจริญ</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">อุดรธานี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=อุดรธานี" style="color: black; text-decoration: none;">อุดรธานี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">อุบลราชธานี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=อุบลราชธานี" style="color: black; text-decoration: none;">อุบลราชธานี</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
     </div>
@@ -273,74 +272,73 @@
                         <div class="column-list">
                             <ul>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">กำแพงเพชร</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=กำแพงเพชร" style="color: black; text-decoration: none;">กำแพงเพชร</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">เชียงราย</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=เชียงราย" style="color: black; text-decoration: none;">เชียงราย</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">เชียงใหม่</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=เชียงใหม่" style="color: black; text-decoration: none;">เชียงใหม่</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">นครสวรรค์</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=นครสวรรค์" style="color: black; text-decoration: none;">นครสวรรค์</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ตาก</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ตาก" style="color: black; text-decoration: none;">ตาก</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">น่าน</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=น่าน" style="color: black; text-decoration: none;">น่าน</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">พะเยา</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=พะเยา" style="color: black; text-decoration: none;">พะเยา</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">พิจิตร</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=พิจิตร" style="color: black; text-decoration: none;">พิจิตร</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">พิษณุโลก</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=พิษณุโลก" style="color: black; text-decoration: none;">พิษณุโลก</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">เพชรบูรณ์</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=เพชรบูรณ์" style="color: black; text-decoration: none;">เพชรบูรณ์</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">แพร่</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=แพร่" style="color: black; text-decoration: none;">แพร่</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">แม่ฮ่องสอน</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=แม่ฮ่องสอน" style="color: black; text-decoration: none;">แม่ฮ่องสอน</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ลำปาง</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ลำปาง" style="color: black; text-decoration: none;">ลำปาง</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ลำปาง</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ลำพูน" style="color: black; text-decoration: none;">ลำพูน</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สุโขทัย</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สุโขทัย" style="color: black; text-decoration: none;">สุโขทัย</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">อุตรดิตถ์</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=อุตรดิตถ์" style="color: black; text-decoration: none;">อุตรดิตถ์</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">อุทัยธานี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=อุทัยธานี" style="color: black; text-decoration: none;">อุทัยธานี</a>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
@@ -379,56 +377,56 @@
                         <div class="column-list">
                             <ul>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ชุมพร</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ชุมพร" style="color: black; text-decoration: none;">ชุมพร</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สุราษฎร์ธานี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สุราษฎร์ธานี" style="color: black; text-decoration: none;">สุราษฎร์ธานี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">นครศรีธรรมราช</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=นครศรีธรรมราช" style="color: black; text-decoration: none;">นครศรีธรรมราช</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สงขลา</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สงขลา" style="color: black; text-decoration: none;">สงขลา</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ตรัง</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ตรัง" style="color: black; text-decoration: none;">ตรัง</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ระนอง</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ระนอง" style="color: black; text-decoration: none;">ระนอง</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">กระบี่</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=กระบี่" style="color: black; text-decoration: none;">กระบี่</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">พังงา</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=พังงา" style="color: black; text-decoration: none;">พังงา</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สตูล</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สตูล" style="color: black; text-decoration: none;">สตูล</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">พัทลุง</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=พัทลุง" style="color: black; text-decoration: none;">พัทลุง</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ปัตตานี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ปัตตานี" style="color: black; text-decoration: none;">ปัตตานี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ยะลา</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ยะลา" style="color: black; text-decoration: none;">ยะลา</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">นราธิวาส</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=นราธิวาส" style="color: black; text-decoration: none;">นราธิวาส</a>
                                 </li>
                             </ul>
                         </div>
@@ -467,30 +465,29 @@
                         <div class="column-list">
                             <ul>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">จันทบุรี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=จันทบุรี" style="color: black; text-decoration: none;">จันทบุรี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ชลบุรี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ชลบุรี" style="color: black; text-decoration: none;">ชลบุรี</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ตราด</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ตราด" style="color: black; text-decoration: none;">ตราด</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ระยอง</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ระยอง" style="color: black; text-decoration: none;">ระยอง</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">สระแก้ว</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=สระแก้ว" style="color: black; text-decoration: none;">สระแก้ว</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="#" style="color: black; text-decoration: none;">ปราจีนบุรี</a>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ปราจีนบุรี" style="color: black; text-decoration: none;">ปราจีนบุรี</a>
                                 </li>
-
                             </ul>
                         </div>
                     </div>

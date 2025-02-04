@@ -83,3 +83,18 @@ body {
 .haed-img {
      text-align: center;
 }
+
+.pu {
+     height: auto;
+     max-width: 400px;
+     width: 100%;
+     height: auto;
+}
+
+.card {
+     transition: transform 0.3s;
+}
+
+.card:hover {
+     transform: scale(1.05);
+}
