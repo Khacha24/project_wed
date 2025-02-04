@@ -43,11 +43,11 @@ body {
      list-style-type: none;
      margin: 0;
      padding: 0;
-     gap: 25px;
+     gap: 20px;
 }
 
 .navbar-links ul li {
-     margin-right: 50px;
+     margin-right: 20px;
 }
 
 .links:hover {

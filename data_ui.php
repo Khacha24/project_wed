@@ -28,65 +28,107 @@ if (isset($_SESSION["admin"])) {
      </a>
      <style>
           .container {
-               max-width: 500px;
+               max-width: 750px;
                width: 100%;
           }
      </style>
-     <br><br><br>
+     <br>
      <div class="container">
           <div class="row">
                <div class="alert h3" role="alert">
                     เพิ่มสถานที่ท่องเที่ยว
                </div>
+               <form method="POST" action="add_data.php" enctype="multipart/form-data">
+                    <!-- Dropdown สำหรับภาค -->
+                    <label for="region">ภาค:</label>
+                    <select id="region" name="region">
+                         <option value="">-- เลือกภาค --</option>
+                         <?php
+                         include 'con_admin.php';
+                         $query = "SELECT * FROM zone";
+                         $result = $conn->query($query);
+                         while ($row = $result->fetch_assoc()) {
+                              echo '<option value="' . $row['zone_id'] . '">' . $row['name_zone'] . '</option>';
+                         }
+                         ?>
+                    </select>
+                    <!-- Dropdown สำหรับจังหวัด -->
+                    <label for="province">จังหวัด:</label>
+                    <select id="province" name="province_id">
+                         <option value="">-- เลือกจังหวัด --</option>
+                    </select>
+                    <script>
+                         // เมื่อเลือกภาค ให้โหลดจังหวัด
+                         $('#region').change(function() {
+                              const regionId = $(this).val();
+                              if (regionId) {
+                                   $.ajax({
+                                        type: 'POST',
+                                        url: 'get_provinces.php',
+                                        data: {
+                                             id_zone: regionId
+                                        },
+                                        success: function(response) {
+                                             $('#province').html(response);
+                                        }
+                                   });
+                              } else {
+                                   $('#province').html('<option value="">-- เลือกจังหวัด --</option>');
+                              }
+                         });
+                    </script>
+                    <label for="region">ประเภท:</label>
+                    <select id="type_id" name="type_id">
+                         <option value="">-- เลือกประเภท --</option>
+                         <?php
+                         include 'con_admin.php';
+                         $query = "SELECT * FROM type";
+                         $result = $conn->query($query);
+                         while ($row = $result->fetch_assoc()) {
+                              echo '<option value="' . $row['type_id'] . '">' . $row['type_name'] . '</option>';
+                         }
+                         ?>
+                    </select>
+                    <br><br>
+                    <label for="img">อัปโหลดรูปภาพ (เฉพาะ .png และ .jpg):</label>
+                    <input type="file" name="img" id="img" class="form-control" accept=".png, .jpg" required>
+                    <br>
+                    <label for="location_name">ชื่อสถานที่ท่องเที่ยว:</label>
+                    <input type="text" name="location_name" class="form-control"><br>
+                    <label for="details">รายละเอียด:</label>
+                    <textarea name="details" id="details" class="form-control" rows="5" required></textarea><br>
+                    <script>
+                         document.getElementById('details').addEventListener('input', function(e) {
+                              // รับภาษาไทย, อังกฤษ, ตัวเลข, ช่องว่าง, บวก (+), ลบ (-), เท่ากับ (=), และเครื่องหมาย /
+                              const pattern = /^[\u0E00-\u0E7F\u0041-\u005A\u0061-\u007A\u0030-\u0039\s+\-=/]+$/;
+                              const value = this.value;
 
-               <form method="POST" action="add_data.php">
-                    <label for="dropdown1">ภาค:</label>
-                    <?php
-                    $sql = "SELECT * FROM zone ORDER BY 'id_ zone'";
-                    $result = mysqli_query($conn, $sql);
-                    ?>
-                    <select id="dropdown1">
-                         <option value="">เลือกภาค</option>
-                         <?php
-                         if ($result->num_rows > 0) {
-                              // แสดงผลแต่ละแถว
-                              while ($row = $result->fetch_assoc()) {
-                                   echo "<option value='" . $row['id_ zone'] . "'>" . $row['name_zone'] . "</option>";
+                              // ลบอักขระที่ไม่ตรงกับรูปแบบ
+                              if (!pattern.test(value)) {
+                                   this.value = value.replace(/[^ก-ฮa-zA-Z0-9\s+\-=/.]/g, '');
                               }
-                         } else {
-                              echo "<option value=''>ไม่มีข้อมูล</option>";
-                         }
-                         ?>
-                    </select>
-                    <br><br>
-                    <?php
-                    $sql = "SELECT * FROM province ORDER BY 'id_province'";
-                    $result = mysqli_query($conn, $sql);
-                    ?>
-                    <label for="dropdown2">จังหวัด:</label>
-                    <select id="dropdown2">
-                         <option value="">เลือกจังหวัด</option>
-                         <?php
-                         if ($result->num_rows > 0) {
-                              while ($row = $result->fetch_assoc()) {
-                                   echo "<option value='" . $row['id_province'] . "'>" . $row['name_province'] . "</option>";
+                         });
+                    </script>
+                    <label for="address">ที่อยู่:</label>
+                    <textarea name="address" id="address" class="form-control" rows="5" required></textarea><br><br>
+
+                    <script>
+                         document.getElementById('address').addEventListener('input', function(e) {
+                              // รับภาษาไทย, อังกฤษ, ตัวเลข, ช่องว่าง, บวก (+), ลบ (-), เท่ากับ (=), และเครื่องหมาย /
+                              const pattern = /^[\u0E00-\u0E7F\u0041-\u005A\u0061-\u007A\u0030-\u0039\s+\-=/]+$/;
+                              const value = this.value;
+
+                              // ลบอักขระที่ไม่ตรงกับรูปแบบ
+                              if (!pattern.test(value)) {
+                                   this.value = value.replace(/[^ก-ฮa-zA-Z0-9\s+\-=/.]/g, '');
                               }
-                         } else {
-                              echo "<option value=''>ไม่มีข้อมูล</option>";
-                         }
-                         ?>
-                    </select>
-                    <br><br>
-                    <input type="text" name="name_location" class="form-control" required placeholder="ชื่อสถานที่ท่องเที่ยว"> <br>
-                    <input type="text" name="firstname" class="form-control" required placeholder="รายละเอียด"> <br>
-                    <input type="text" name="address" class="form-control" required placeholder="ที่อยู่"> <br>
-                    <input type="submit" name="submit" value="เพิ่ม" class="btn text-white " style="background-color: #FF8C00;">
+                         });
+                    </script>
+                    <input type="submit" name="submit" value="เพิ่ม" class="btn text-white " style="background-color:rgb(240, 133, 2);">
                     <input type="reset" name="submit" value="ยกเลิก" class=" btn text-gray btn-warning " href="admin.php" style="background-color: #ffffff; "><br>
                     <br><a href="admin.php">กลับ</a>
+                    <a href="data_location.php">ข้อมูลสถานที่ทั้งหมด</a>
                </form>
-          </div>
-     </div>
-     </div>
 </body>
 
 </html>

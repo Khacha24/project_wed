@@ -1,5 +1,5 @@
 <?php
-include 'connectdb.php';
+include 'con_admin.php';
 session_start();
 if (isset($_SESSION["user"])) {
   echo " <script> alert('คุณกำลังออกจากระบบ'); </script>";

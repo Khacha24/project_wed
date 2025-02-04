@@ -1,5 +1,5 @@
 <?php
-include 'connectdb.php';
+include 'con_admin.php';
 session_start();
 if (isset($_SESSION["user"])) {
   echo " <script> alert('คุณกำลังออกจากระบบ'); </script>";
@@ -37,7 +37,7 @@ if (isset($_SESSION["user"])) {
           <input type="text" name="firstname" class="form-control" required placeholder="ชื่อ"> <br>
           <input type="text" name="lastname" class="form-control" required placeholder="นามสกุล"><br>
           <input type="number" name="phone" class="form-control" required placeholder="เบอร์โทรศัพท์"><br>
-          <input type="text" name="username" maxlength="10" class="form-control" required placeholder="ชื่อผู้ใช้"><br>
+          <input type="text" name="username" maxlength="10" class="form-control" required pattern="[A-Za-z0-9]+" placeholder="ชื่อผู้ใช้"><br>
           <input type="password" name="password" maxlength="10" class="form-control" required placeholder="รหัสผ่าน"><br>
           <?php
           if (isset($_SESSION["Error_password"])) {

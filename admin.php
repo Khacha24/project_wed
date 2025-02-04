@@ -32,7 +32,13 @@ if (isset($_SESSION["admin"])) {
                     admin
                </div>
                <form method="POST" action="data_ui.php">
-                    <input type="submit" name="submit" value="ใส่ข้อมูลสถานที่" class="btn text-white " style="background-color: #FF8C00;">
+                    <input type="submit" name="submit" value="เพิ่มข้อมูลสถานที่" class="btn text-white " style="background-color: rgb(240, 133, 2);">
+               </form><br><br>
+               <form method="POST" action="data_location.php">
+                    <input type="submit" name="submit" value="ดูข้อมูลสถานที่ทั้งหมด" class="btn text-white " style="background-color:rgb(240, 133, 2);">
+               </form><br><br>
+               <form method="POST" action="index.php">
+                    <input type="submit" name="submit" value="กลับหน้าหลัก" class="btn text-white " style="background-color:rgb(240, 133, 2);">
                </form>
           </div>
      </div>

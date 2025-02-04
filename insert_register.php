@@ -1,5 +1,5 @@
 <?php
-include 'connectdb.php';
+include 'con_admin.php';
 session_start();
 $name = $_POST['firstname'];
 $lastname = $_POST['lastname'];

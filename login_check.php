@@ -1,5 +1,5 @@
 <?php
-include 'connectdb.php';
+include 'con_admin.php';
 session_start();
 
 $username = $_POST['username'];
@@ -9,7 +9,7 @@ $password = $_POST['password'];
 $password = hash('sha512', $password);
 
 // เช็คข้อมูลผู้ใช้
-$sql = "SELECT * FROM member WHERE username = '$username' AND password = '$password'";
+$sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 

@@ -15,7 +15,6 @@
 
     }
 </script>
-
 <!-- ภาคกลางงง -->
 
 <body>
@@ -40,7 +39,7 @@
                             <ul>
                                 <li>
                                     <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
-                                    <a href="Bangkok_main.php" style="color: black; text-decoration: none;">กรุงเทพ</a>
+                                    <a href="provinces.php" style="color: black; text-decoration: none;">กรุงเทพ</a>
                                 </li>
                                 <li>
                                     <i class="fa fa-arrow-cirle-right " style="color:black;"></i>
