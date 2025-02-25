@@ -1,31 +1,33 @@
 <?php
-include 'con_admin.php'; // เชื่อมต่อฐานข้อมูล
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "backticks";
 
-if (isset($_POST['id_zone'])) {
-     $regionId = $_POST['id_zone']; // รับค่าจาก POST
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-     // คำสั่ง SQL: ดึงจังหวัดที่อยู่ใน  ที่เลือก
-     $query = "SELECT * FROM province WHERE zone_id = ?";
-     $stmt = $conn->prepare($query); // เตรียมคำสั่ง SQL
+// ตรวจสอบการเชื่อมต่อ
+if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+}
 
-     if ($stmt) {
-          $stmt->bind_param('i', $regionId);
-          $stmt->execute();
-          $result = $stmt->get_result();
+$id_zone = isset($_POST['id_zone']) ? $_POST['id_zone'] : '';
 
-          if ($result->num_rows > 0) {
-               echo '<option value="">-- เลือกจังหวัด --</option>';
-               while ($row = $result->fetch_assoc()) {
-                    echo '<option value="' . $row['province_id'] . '">' . $row['name_province'] . '</option>';
-               }
-          } else {
-               echo '<option value="">-- ไม่มีข้อมูลจังหวัด --</option>';
+if (!empty($id_zone)) {
+     $sql = "SELECT * FROM province WHERE zone_id = '$id_zone'";
+     $result = $conn->query($sql);
+
+     if ($result->num_rows > 0) {
+          // ส่งข้อมูลจังหวัดให้กับฝั่ง frontend
+          echo '<option value="">-- เลือกจังหวัด --</option>'; // ตัวเลือกเริ่มต้น
+          while ($row = $result->fetch_assoc()) {
+               echo '<option value="' . $row['province_id'] . '">' . $row['name_province'] . '</option>';
           }
-
-          $stmt->close(); // ปิด Statement
      } else {
-          echo '<option value="">-- SQL Error: ' . $conn->error . ' --</option>';
+          echo '<option value="">ไม่มีข้อมูลจังหวัด</option>';
      }
 } else {
-     echo '<option value="">-- region_id is not set --</option>';
+     echo '<option value="">เลือกภาคก่อน</option>';
 }
+
+$conn->close();

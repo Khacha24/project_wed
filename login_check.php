@@ -14,10 +14,10 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 
 if ($row) {  // ตรวจสอบในฐานข้อมูล
-    if ($username === 'root' && $password === hash('sha512', '12345')) {
-        $_SESSION["username"] = "root";
+    if ($username === 'Flook' && $password === hash('sha512', '12345')) {
+        $_SESSION["username"] = "Flook";
         $_SESSION["pw"] = 12345;
-        $_SESSION["admin"] = "root" && 12345;
+        $_SESSION["admin"] = "Flook" && 12345;
         $_SESSION["user"] = $_SESSION["username"];
 
         header("Location: index.php");

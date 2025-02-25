@@ -24,11 +24,10 @@ session_start();
                 <ul>
                     <li><a href="index.php" class="links">หน้าแรก</a></li>
                     <li><a href=" #" class="links">แนะนำสถานที่ท่องเที่ยว</a></li>
-                    <li><a href="#" class="links">ข้อมูลจังหวัด</a></li>
                     <li><a href="contact.php" class="links">เกี่ยวกับเรา</a></li>
                     <?php
                     if (isset($_SESSION["admin"])) {
-                        echo "<li><a href='admin.php'class='links'>admin</a></li>";
+                        echo "<li><a href='dashboard.php'class='links'>admin</a></li>";
                     }
                     ?>
                 </ul>
@@ -38,14 +37,15 @@ session_start();
                 if (isset($_SESSION["username"])) {
                     echo "<button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'>";
                     echo "สวัสดีคุณ ";
-                    echo $_SESSION["user"];
+                    echo $_SESSION["username"];
                     echo "</button>";
                     echo "<ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>";
-                    echo  "<li><a class='dropdown-item' href='logout.php'>ออกจากระบบ</a></li>";
-                    echo  "</ul>";
+                    echo "<li><a class='dropdown-item' href='logout.php'>ออกจากระบบ</a></li>";
+                    echo "</ul>";
                 } else {
                     echo "<a href='login.php' class='links'>เข้าสู่ระบบ</a>";
                 }
+
                 ?>
             </div>
         </div>

@@ -23,9 +23,9 @@ if (isset($_SESSION["admin"])) {
 </head>
 
 <body>
-     <a href="index.php">
-          <img src="img/logo/3e0f7443ad39a0ad.png" alt="Description of Image" width="350" height="140" />
-     </a>
+     <?php
+     include 'sidebar.php';
+     ?>
      <style>
           .container {
                max-width: 750px;
@@ -105,29 +105,25 @@ if (isset($_SESSION["admin"])) {
 
                               // ลบอักขระที่ไม่ตรงกับรูปแบบ
                               if (!pattern.test(value)) {
-                                   this.value = value.replace(/[^ก-ฮa-zA-Z0-9\s+\-=/.]/g, '');
+                                   this.value = value.replace(/[^ก-ฮะ-์a-zA-Z0-9\s+\-=/.]/g, '');
                               }
                          });
                     </script>
                     <label for="address">ที่อยู่:</label>
                     <textarea name="address" id="address" class="form-control" rows="5" required></textarea><br><br>
-
                     <script>
                          document.getElementById('address').addEventListener('input', function(e) {
                               // รับภาษาไทย, อังกฤษ, ตัวเลข, ช่องว่าง, บวก (+), ลบ (-), เท่ากับ (=), และเครื่องหมาย /
                               const pattern = /^[\u0E00-\u0E7F\u0041-\u005A\u0061-\u007A\u0030-\u0039\s+\-=/]+$/;
                               const value = this.value;
-
                               // ลบอักขระที่ไม่ตรงกับรูปแบบ
                               if (!pattern.test(value)) {
-                                   this.value = value.replace(/[^ก-ฮa-zA-Z0-9\s+\-=/.]/g, '');
+                                   this.value = value.replace(/[^ก-ฮะ-์a-zA-Z0-9\s+\-=/.]/g, '');
                               }
                          });
                     </script>
                     <input type="submit" name="submit" value="เพิ่ม" class="btn text-white " style="background-color:rgb(240, 133, 2);">
-                    <input type="reset" name="submit" value="ยกเลิก" class=" btn text-gray btn-warning " href="admin.php" style="background-color: #ffffff; "><br>
-                    <br><a href="admin.php">กลับ</a>
-                    <a href="data_location.php">ข้อมูลสถานที่ทั้งหมด</a>
+                    <input type="button" value="ยกเลิก" class="btn text-gray btn-warning" style="background-color: #ffffff;" onclick="history.back();"><br>
                </form>
 </body>
 

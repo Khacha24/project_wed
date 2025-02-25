@@ -117,6 +117,14 @@
                                     <i class="fa fa-arrow-circle-right" style="color:black;"></i>
                                     <a href="provinces.php?province=ประจวบคีรีขันธ์" style="color: black; text-decoration: none;">ประจวบคีรีขันธ์</a>
                                 </li>
+                                <li>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=กำแพงเพชร" style="color: black; text-decoration: none;">กำแพงเพชร</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=นครสวรรค์" style="color: black; text-decoration: none;">นครสวรรค์</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -156,7 +164,7 @@
                             <ul>
                                 <li>
                                     <i class="fa fa-arrow-circle-right" style="color:black;"></i>
-                                    <a href="provinces.php?province=โคราช" style="color: black; text-decoration: none;">โคราช</a>
+                                    <a href="provinces.php?province=นครราชสีมา" style="color: black; text-decoration: none;">นครราชสีมา</a>
                                 </li>
                                 <li>
                                     <i class="fa fa-arrow-circle-right" style="color:black;"></i>
@@ -273,19 +281,11 @@
                             <ul>
                                 <li>
                                     <i class="fa fa-arrow-circle-right" style="color:black;"></i>
-                                    <a href="provinces.php?province=กำแพงเพชร" style="color: black; text-decoration: none;">กำแพงเพชร</a>
-                                </li>
-                                <li>
-                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
                                     <a href="provinces.php?province=เชียงราย" style="color: black; text-decoration: none;">เชียงราย</a>
                                 </li>
                                 <li>
                                     <i class="fa fa-arrow-circle-right" style="color:black;"></i>
                                     <a href="provinces.php?province=เชียงใหม่" style="color: black; text-decoration: none;">เชียงใหม่</a>
-                                </li>
-                                <li>
-                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
-                                    <a href="provinces.php?province=นครสวรรค์" style="color: black; text-decoration: none;">นครสวรรค์</a>
                                 </li>
                                 <li>
                                     <i class="fa fa-arrow-circle-right" style="color:black;"></i>
@@ -427,6 +427,10 @@
                                 <li>
                                     <i class="fa fa-arrow-circle-right" style="color:black;"></i>
                                     <a href="provinces.php?province=นราธิวาส" style="color: black; text-decoration: none;">นราธิวาส</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-arrow-circle-right" style="color:black;"></i>
+                                    <a href="provinces.php?province=ภูเก็ต" style="color: black; text-decoration: none;">ภูเก็ต</a>
                                 </li>
                             </ul>
                         </div>

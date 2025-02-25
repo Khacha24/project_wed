@@ -33,7 +33,8 @@ if (isset($_SESSION["user"])) {
           เข้าสู่ระบบ / สร้างบัญชี
         </div>
         <form method="POST" action="login_check.php">
-          <input type="text" name="username" maxlength="10" class="form-control" required placeholder="Username"><br>
+          <label for="location_name">ชื่อผู้ใช้:</label>
+          <input type="text" name="username" maxlength="10" class="form-control"><br>
           <?php
           if (isset($_SESSION["Error"])) {
             echo "<div class = 'text-danger'>";
@@ -42,10 +43,11 @@ if (isset($_SESSION["user"])) {
             unset($_SESSION["Error"]);
           }
           ?>
-          <input type="password" name="password" maxlength="10" class="form-control" rrequired placeholder="Password"><br>
-          <p>คุณยังไม่มีบัญชี? <a href="register.php">สร้างบัญชี</a> ที่นี่</p>
+          <label for="location_name">รหัสผ่าน:</label>
+          <input type="password" name="password" maxlength="10" class="form-control"><br>
+          <p>คุณยังไม่มีบัญชี? <a href="register.php">สร้างบัญชี</a> ที่นี่ หรือ <a href="forgot_password.php">ลืมรหัสผ่าน</a></p>
           <input type="submit" name="submit" value="ยืนยัน" class="btn text-white " style="background-color: #FF8C00;">
-          <input type="reset" name="submit" value="ยกเลิก" class=" btn text-gray btn-warning " style="background-color: #ffffff; "><br>
+          <input type="button" value="ยกเลิก" class="btn text-gray btn-warning" style="background-color: #ffffff;" onclick="history.back();">
           <br>
         </form>
       </div>

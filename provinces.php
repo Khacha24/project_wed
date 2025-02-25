@@ -43,6 +43,49 @@ if (!empty($province)) {
 <body>
     <?php include 'menu.php'; ?>
     <br>
+    <div class="centered-container">
+        <div class="centered-content">
+            <h1>คุณอยากไป<span style="color: #FF8C00;">ที่ไหนล่ะ ?</span></h1>
+            <i class="fi fi-rs-map-marker"></i>
+        </div>
+    </div>
+    <link rel="stylesheet" href="bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .search-form {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* ทำมุมให้โค้งมน */
+        }
+
+        .form-control {
+            border-radius: 20px;
+
+        }
+
+        .btn-search {
+            /* ปรับของปุ่ม */
+            border-radius: 20px;
+            padding: 8px 20px;
+            font-weight: bold;
+            font-size: 1em;
+            background-color: #FF8C00;
+            color: white;
+            border: none;
+        }
+
+        .btn-search:hover {
+            background-color: #FF8C00;
+        }
+    </style>
+    <form class="search-form d-flex" action="search.php" method="GET">
+        <input class="form-control me-2" type="search" name="query" placeholder="ค้นหาสถานที่เที่ยวที่คุณอยากไป" aria-label="Search">
+        <button class="btn btn-outline-success btn-search" style="color:rgb(255, 255, 255);" type="submit">ค้นหา</button>
+    </form>
+    <br><br>
     <div class="contaainer mt-5">
         <h1 class="text-center mb-4">สถานที่ท่องเที่ยว<span style="color: #FF8C00;"><?php echo htmlspecialchars($province); ?></span></h1>
         <br>
@@ -50,17 +93,18 @@ if (!empty($province)) {
             <?php if ($result && $result->num_rows > 0) : ?>
                 <?php while ($row = $result->fetch_assoc()) : ?>
                     <div class="pu col-md-4 col-sm-6 mb-4">
-                        <div class="card shadow-sm mx-auto" style="max-width: 350px;">
-                            <img src="<?php echo htmlspecialchars($row['img']); ?>" class="card-img-top" alt="ไม่สามารถโหลดรูปได้" style="max-width:100%; max-height:180px; object-fit:cover;">
-                            <div class="card-body text-center">
-                                <h5 class="card-title"><?php echo htmlspecialchars($row['location_name']); ?></h5>
-                                <p class="card-text">
-                                    <strong>จังหวัด:</strong> <?php echo htmlspecialchars($row['name_province']); ?><br>
-                                    <strong>ประเภท:</strong> <?php echo htmlspecialchars($row['type_name']); ?>
-                                </p>
-                                <a href="show_location.php?location_id=<?php echo $row['location_id']; ?>" class="btn text-white" style='background-color:rgb(240, 133, 2);'>ดูรายละเอียด</a>
+                        <a href="show_location.php?location_id=<?php echo $row['location_id']; ?>" class="text-decoration-none text-dark">
+                            <div class="card shadow-sm mx-auto" style="max-width: 350px;">
+                                <img src="<?php echo htmlspecialchars($row['img']); ?>" class="card-img-top" alt="ไม่สามารถโหลดรูปได้" style="max-width:100%; max-height:180px; object-fit:cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title"><?php echo htmlspecialchars($row['location_name']); ?></h5>
+                                    <p class="card-text">
+                                        <strong>จังหวัด:</strong> <?php echo htmlspecialchars($row['name_province']); ?><br>
+                                        <strong>ประเภท:</strong> <?php echo htmlspecialchars($row['type_name']); ?>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 <?php endwhile; ?>
             <?php else : ?>
