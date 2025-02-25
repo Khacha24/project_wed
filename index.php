@@ -18,7 +18,7 @@
     <?php
     include 'menu.php';
     ?>
-
+    <br><br>
     <!-- ส่วนแนะนำสถานที่ท่องเที่ยว -->
     <div class="centered-container">
         <div class="centered-content">
@@ -26,6 +26,7 @@
             <i class="fi fi-rs-map-marker"></i>
         </div>
     </div>
+    <br>
     <link rel="stylesheet" href="bootstrap/5.3.0/css/bootstrap.min.css">
     <style>
         .search-form {
@@ -58,13 +59,21 @@
             background-color: #FF8C00;
         }
     </style>
-    <form class="search-form d-flex">
-        <input class="form-control me-2" type="search" placeholder="ค้นหาสถานที่เที่ยวที่คุณอยากไป" aria-label="Search">
-        <button class="btn btn-outline-success btn-search color: #fd7e14" type="submit">ค้นหา</button>
+    <form class="search-form d-flex" action="search.php" method="GET">
+        <input class="form-control me-2" type="search" name="query" placeholder="ค้นหาสถานที่เที่ยวที่คุณอยากไป" aria-label="Search">
+        <button class="btn btn-outline-success btn-search" style="color:rgb(255, 255, 255);" type="submit">ค้นหา</button>
     </form>
 
     <body>
         <br><br><br><br>
+        <?php
+        require 'con_admin.php'; // เชื่อมต่อฐานข้อมูล
+
+        // ดึงข้อมูลรูปภาพจากตาราง location_all แบบสุ่ม 4 รูป
+        $sql = "SELECT img, location_id FROM location_all ORDER BY RAND() LIMIT 4";
+        $result = $conn->query($sql);
+        ?>
+
         <div class="haed-img">
             <h1>---- แนะนำ<span style="color: #FF8C00;">สำหรับคุณ ----</h1>
         </div>
@@ -72,21 +81,33 @@
         <div class="img-s">
             <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <?php
+                    $i = 0;
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="' . $i . '" ';
+                        echo ($i == 0) ? 'class="active" aria-current="true"' : '';
+                        echo ' aria-label="Slide ' . ($i + 1) . '"></button>';
+                        $i++;
+                    }
+                    ?>
                 </div>
+
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/data/zip_-_1.png" class="d-block w-100" alt="รูป 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/data/zip_-_3.png" class="d-block w-100" alt="Slide 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/data/zip_-_6.png" class="d-block w-100" alt="Slide 3">
-                    </div>
+                    <?php
+                    $result->data_seek(0); // รีเซ็ต pointer ของ result set
+                    $first = true;
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<div class="carousel-item ' . ($first ? 'active' : '') . '">';
+                        // ล้อมรอบภาพด้วยลิงก์
+                        echo '<a href="show_location.php?location_id=' . $row["location_id"] . '">';
+                        echo '<img src="' . $row["img"] . '" alt="Image">';
+                        echo '</a>';
+                        echo '</div>';
+                        $first = false;
+                    }
+                    ?>
                 </div>
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
@@ -97,49 +118,54 @@
                 </button>
             </div>
         </div>
-        <br><br><br>
-    </body>
 
-    <div class="centered-container2">
-        <div class="centered-content2">
-            <h1><span style="color: #000;">---- เลือกจังหวัดที่<span style="color: #FF8C00;">คุณอยากไป ----</span></h1>
-            <div class="container my-5">
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <a onclick="openPopup1()">
-                            <img src="img/logo/zip_-_1.PNG" class="image-hover custom-img" alt="ภาคกลาง">
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <a onclick="openPopup2()">
-                            <img src="img/logo/zip_-_4.PNG" class="image-hover custom-img" alt="ภาคอีสาน">
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <a onclick="openPopup3()">
-                            <img src="img/logo/zip_-_5.PNG" class="image-hover custom-img" alt="ภาคเหนือ">
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <a onclick="openPopup4()">
-                            <img src="img/logo/zip_-_2.PNG" class="image-hover custom-img" alt="ภาคใต้">
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <a onclick="openPopup5()">
-                            <img src="img/logo/zip_-_3.PNG" class="image-hover custom-img" alt="ภาคตะวันออก">
-                        </a>
+        <?php
+        $conn->close(); // ปิดการเชื่อมต่อฐานข้อมูล
+        ?>
+
+
+        <br><br><br>
+
+        <div class="centered-container2">
+            <div class="centered-content2">
+                <h1><span style="color: #000;">---- เลือกจังหวัดที่<span style="color: #FF8C00;">คุณอยากไป ----</span></h1>
+                <div class="container my-5">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <a onclick="openPopup1()">
+                                <img src="img/logo/zip_-_1.PNG" class="image-hover custom-img" alt="ภาคกลาง">
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a onclick="openPopup2()">
+                                <img src="img/logo/zip_-_4.PNG" class="image-hover custom-img" alt="ภาคอีสาน">
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a onclick="openPopup3()">
+                                <img src="img/logo/zip_-_5.PNG" class="image-hover custom-img" alt="ภาคเหนือ">
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a onclick="openPopup4()">
+                                <img src="img/logo/zip_-_2.PNG" class="image-hover custom-img" alt="ภาคใต้">
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a onclick="openPopup5()">
+                                <img src="img/logo/zip_-_3.PNG" class="image-hover custom-img" alt="ภาคตะวันออก">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <?php include 'popup.php'; ?>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <br><br><br><br><br>
-    <?php include 'footer.php'; ?>
-</body>
+        <?php include 'popup.php'; ?>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <br><br><br><br><br>
+        <?php include 'footer.php'; ?>
+    </body>
 
 
 </html>

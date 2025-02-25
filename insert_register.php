@@ -3,12 +3,12 @@ include 'con_admin.php';
 session_start();
 $name = $_POST['firstname'];
 $lastname = $_POST['lastname'];
-$phone = $_POST['phone'];
+$email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 $password_check = $_POST['password2'];
 
-$sql_check = "SELECT * FROM member WHERE telephone = '$phone'";
+$sql_check = "SELECT * FROM user WHERE email = '$email'";
 $result_check = mysqli_query($conn, $sql_check);
 
 if ($password === $password_check) {
@@ -18,8 +18,8 @@ if ($password === $password_check) {
         echo "<script> alert('เบอร์โทรศัพท์นี้ได้ถูกใช้สมัครแล้ว'); </script>";
         echo "<script> window.location = 'register.php';</script>";
     } else {
-        $sql = "INSERT INTO member (name, lastname, telephone, username, password)
-            VALUES ('$name', '$lastname', '$phone', '$username', '$password')";
+        $sql = "INSERT INTO user (name, lastname, email, username, password)
+            VALUES ('$name', '$lastname', '$email', '$username', '$password')";
         $result = mysqli_query($conn, $sql);
         if ($result) {
             echo " <script> alert('บันทึกข้อมูลเรียบร้อย'); </script>";
