@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      if ($stmt->num_rows > 0) {
           // 🔹 สร้างโทเค็นสุ่ม
           $token = bin2hex(random_bytes(32)); // สุ่มโทเค็น 64 ตัวอักษร
-          $expiry = date("Y-m-d H:i:s", strtotime("+1 day")); // กำหนดให้หมดอายุในวันพรุ่งนี้
+          $expiry = date("Y-m-d H:i:s", strtotime("+1 day"));
 
           // 💾 บันทึกโทเค็นลงฐานข้อมูล
           $stmt = $conn->prepare("UPDATE user SET reset_token = ?, reset_expires = ? WHERE email = ?");
@@ -36,8 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                $mail->isSMTP();
                $mail->Host       = 'smtp.gmail.com';
                $mail->SMTPAuth   = true;
-               $mail->Username   = 'khacha0981207463@gmail.com'; // 📌 เปลี่ยนเป็นอีเมลของคุณ
-               $mail->Password   = 'vivtyhwcuqbtixvn';  // 📌 เปลี่ยนเป็น App Password ของคุณ
+               $mail->Username   = 'khacha0981207463@gmail.com';
+               $mail->Password   = 'vivtyhwcuqbtixvn';
                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                $mail->Port       = 587;
 

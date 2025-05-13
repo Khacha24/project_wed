@@ -40,8 +40,10 @@ $categoryResult = $conn->query($categoryQuery);
       <link rel="stylesheet" href="Bootstrap/css/s_provinces.css">
       <style>
             .category-list {
-                  margin-top: 100px;
-                  margin-left: 60px;
+                  width: 100%;
+                  height: 100%;
+                  margin-top: 110px;
+                  margin-left: 260px;
                   text-align: left;
             }
 
@@ -75,12 +77,13 @@ $categoryResult = $conn->query($categoryQuery);
 
 <body>
       <?php include 'menu.php'; ?>
+      <br>
       <div class="container my-4">
             <div class="row">
                   <!-- Content Section -->
                   <div class="col-lg-8">
                         <h1><?php echo $row['location_name']; ?></h1>
-                        <br>
+                        <br><br>
                         <img src="<?php echo $row['img']; ?>" alt="ไม่สามารถโหลดรูปได้" width="750" height="460">
                         <br>
                         <div class="mt-4">

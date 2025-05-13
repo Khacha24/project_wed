@@ -23,7 +23,7 @@ session_start();
             <div class="navbar-links" id="navbar-links">
                 <ul>
                     <li><a href="index.php" class="links">หน้าแรก</a></li>
-                    <li><a href=" #" class="links">แนะนำสถานที่ท่องเที่ยว</a></li>
+                    <li><a href=" #" class="links">สถานที่ท่องเที่ยวยอดนิยม</a></li>
                     <li><a href="contact.php" class="links">เกี่ยวกับเรา</a></li>
                     <?php
                     if (isset($_SESSION["admin"])) {
@@ -40,6 +40,7 @@ session_start();
                     echo $_SESSION["username"];
                     echo "</button>";
                     echo "<ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>";
+                    echo "<li><a class='dropdown-item' href='change_password.php'>เปลื่ยนรหัสผ่าน</a></li>";
                     echo "<li><a class='dropdown-item' href='logout.php'>ออกจากระบบ</a></li>";
                     echo "</ul>";
                 } else {

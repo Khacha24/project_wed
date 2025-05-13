@@ -25,29 +25,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $stmt->fetch();
      $stmt->close();
 
-     if (!$hashed_password || !password_verify($old_password, $hashed_password)) {
-          $message = "รหัสผ่านเก่าไม่ถูกต้อง!";
-     } elseif ($new_password !== $confirm_password) {
-          $message = "รหัสผ่านใหม่ทั้งสองช่องต้องตรงกัน!";
-     } elseif (strlen($new_password) < 6) {
-          $message = "รหัสผ่านใหม่ต้องมีความยาวอย่างน้อย 6 ตัวอักษร!";
-     } else {
-          // แฮชรหัสผ่านใหม่
-          $new_hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
+     $stmt = $conn->prepare("SELECT id FROM user WHERE email = ?");
+     $stmt->bind_param("s", $email);
+     $stmt->execute();
+     $stmt->store_result();
 
-          // อัปเดตรหัสผ่านในฐานข้อมูล
-          $sql = "UPDATE user SET password = ? WHERE id = ?";
-          $stmt = $conn->prepare($sql);
-          $stmt->bind_param("si", $new_hashed_password, $user_id);
-
-          if ($stmt->execute()) {
-               $message = "เปลี่ยนรหัสผ่านสำเร็จ!";
+     if ($stmt->num_rows > 0) {
+          if (!$hashed_password || !password_verify($old_password, $hashed_password)) {
+               $message = "รหัสผ่านเก่าไม่ถูกต้อง!";
+          } elseif ($new_password !== $confirm_password) {
+               $message = "รหัสผ่านใหม่ทั้งสองช่องต้องตรงกัน!";
+          } elseif (strlen($new_password) < 6) {
+               $message = "รหัสผ่านใหม่ต้องมีความยาวอย่างน้อย 6 ตัวอักษร!";
           } else {
-               $message = "เกิดข้อผิดพลาด กรุณาลองอีกครั้ง!";
+               // แฮชรหัสผ่านใหม่
+               $new_hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
+
+               // อัปเดตรหัสผ่านในฐานข้อมูล
+               $sql = "UPDATE user SET password = ? WHERE id = ?";
+               $stmt = $conn->prepare($sql);
+               $stmt->bind_param("si", $new_hashed_password, $user_id);
+
+               if ($stmt->execute()) {
+                    $message = "เปลี่ยนรหัสผ่านสำเร็จ!";
+               } else {
+                    $message = "เกิดข้อผิดพลาด กรุณาลองอีกครั้ง!";
+               }
+               $stmt->close();
           }
-          $stmt->close();
+     } else {
+          echo "<script>alert('อีเมลนี้ไม่ถูกต้อง'); window.location = 'change_password.php';</script>";
      }
 }
+
 
 $conn->close();
 ?>
@@ -85,6 +95,9 @@ $conn->close();
 </head>
 
 <body>
+     <a href="index.php">
+          <img src="img/logo/3e0f7443ad39a0ad.png" alt="Description of Image" width="350" height="140" />
+     </a>
      <div class="container mt-5">
           <h2 class="text-center">เปลี่ยนรหัสผ่าน</h2>
           <?php if ($message) {
@@ -93,7 +106,10 @@ $conn->close();
 
           <form method="POST" action="">
                <div class="mb-3">
-                    <label for="password" class="form-label">รหัสผ่าน:</label>
+                    <label for="email" class="form-label">อีเมล:</label>
+                    <input type="email" id="email" name="email" class="form-control" required oninput="checkPasswordMatch()">
+
+                    <label for="password" class="form-label">รหัสผ่านเก่า:</label>
                     <input type="password" id="old_password" name="old_password" class="form-control" required oninput="checkPasswordMatch()">
 
 
@@ -105,6 +121,7 @@ $conn->close();
                     <input type="password" id="password2" name="confirm_password" class="form-control" required oninput="checkPasswordMatch()">
                     <div id="passwordError"></div>
                </div>
+               <br>
                <input type="submit" name="submit" value="เปลื่ยนรหัสผ่าน" class="btn text-white" style="background-color: #FF8C00;">
                <input type="button" value="ยกเลิก" class="btn text-gray btn-warning" style="background-color: #ffffff;" onclick="history.back();"><br>
           </form>

@@ -18,6 +18,8 @@ while ($row = mysqli_fetch_assoc($result_zones)) {
      $zones_data[] = $row;
 }
 
+
+
 // ดึงข้อมูลจังหวัด (Province) พร้อมจำนวนสถานที่ท่องเที่ยว
 $sql_provinces = "SELECT province.name_province, COUNT(location_all.location_id) AS location_count
                   FROM province
