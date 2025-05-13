@@ -12,7 +12,7 @@
      </div>
      <div class="text_footer-r">
           <p>ติดต่องาน</p>
-          <p>e-mail : khacha0981207463@gmail.com</p>
+          <p>e-mail : <a href="mailto:khacha0981207463@gmail.com" class="links">khacha0981207463@gmail.com</a></p>
           <p>เบอร์โทรศัพท์ : 098-120-7433</p>
      </div>
 </div>
